@@ -1,0 +1,254 @@
+#!/usr/bin/env python3
+"""
+Build the weekly opponent-data JSON for the 4th & Go Season Command Center.
+
+Pulls free public data from nflverse (the same project the dashboard already
+uses for rosters and player stats), computes DraftKings-scoring fantasy points
+allowed by each defense to QB/RB/WR/TE, and writes a file in exactly the shape
+the dashboard's Opponent Data importer expects:
+
+    {
+      "week": 3,
+      "matchups":        {"ATL": "GB", "GB": "ATL", ...},
+      "defenseAverages": {"GB": {"QB": 16.6, "RB": 22.8, "WR": 33.2, "TE": 11.5}, ...},
+      "vegasImplied":    {"ATL": 19.0, "GB": 23.5, ...},    # optional extra
+      "source": "...",
+      "updated": "2026-09-23T12:00:00Z"
+    }
+
+Usage:
+    python build_opponent_data.py                 # auto-detect season + upcoming week
+    python build_opponent_data.py --week 3        # force a week
+    python build_opponent_data.py --season 2026 --week 3 --out data
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+import pandas as pd
+
+# ---------------------------------------------------------------------------
+# Data sources (all free, no API key, published by nflverse)
+# ---------------------------------------------------------------------------
+SCHEDULE_URL = "https://github.com/nflverse/nfldata/raw/master/data/games.csv"
+STATS_URL = (
+    "https://github.com/nflverse/nflverse-data/releases/download/"
+    "stats_player/stats_player_week_{season}.csv"
+)
+
+POSITIONS = ["QB", "RB", "WR", "TE"]
+POSITION_MAP = {"FB": "RB"}  # count fullbacks as RB
+
+# How many "games" of last season's average to blend in. Early in the year a
+# defense has only 1-2 games of data, which is very noisy. With PRIOR_WEIGHT=4,
+# a team with 2 games played is 2/6 this season + 4/6 last season; by week 12
+# it is ~73% this season. Set to 0 to use current season only.
+PRIOR_WEIGHT = 4
+
+# The dashboard's player pool mixes team-code conventions (nflverse uses JAX and
+# LA; the built-in pool uses JAC for Jacksonville; other sites use LAR and WSH).
+# Every alias is written into both maps so lookups work whichever code a
+# player carries.
+TEAM_ALIASES = {"JAX": ["JAC"], "LA": ["LAR"], "WAS": ["WSH"]}
+
+# DraftKings classic scoring. Change these if your league scores differently
+# (e.g. half-PPR: set "reception" to 0.5 and drop the yardage bonuses).
+SCORING = {
+    "pass_yd": 0.04, "pass_td": 4, "pass_int": -1, "pass_300_bonus": 3,
+    "rush_yd": 0.1, "rush_td": 6, "rush_100_bonus": 3,
+    "reception": 1, "rec_yd": 0.1, "rec_td": 6, "rec_100_bonus": 3,
+    "fumble_lost": -1, "two_pt": 2, "return_td": 6,
+}
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+def log(msg: str) -> None:
+    print(msg, file=sys.stderr)
+
+
+def col(df: pd.DataFrame, name: str) -> pd.Series:
+    """Return a numeric column, or zeros if nflverse ever renames/drops it."""
+    if name not in df.columns:
+        log(f"  warning: column '{name}' missing from stats file; treating as 0")
+        return pd.Series(0.0, index=df.index)
+    return pd.to_numeric(df[name], errors="coerce").fillna(0.0)
+
+
+def dk_points(df: pd.DataFrame) -> pd.Series:
+    s = SCORING
+    pass_yds, rush_yds, rec_yds = col(df, "passing_yards"), col(df, "rushing_yards"), col(df, "receiving_yards")
+    fumbles = col(df, "sack_fumbles_lost") + col(df, "rushing_fumbles_lost") + col(df, "receiving_fumbles_lost")
+    two_pt = col(df, "passing_2pt_conversions") + col(df, "rushing_2pt_conversions") + col(df, "receiving_2pt_conversions")
+    return (
+        pass_yds * s["pass_yd"] + col(df, "passing_tds") * s["pass_td"]
+        + col(df, "passing_interceptions") * s["pass_int"] + (pass_yds >= 300) * s["pass_300_bonus"]
+        + rush_yds * s["rush_yd"] + col(df, "rushing_tds") * s["rush_td"] + (rush_yds >= 100) * s["rush_100_bonus"]
+        + col(df, "receptions") * s["reception"] + rec_yds * s["rec_yd"]
+        + col(df, "receiving_tds") * s["rec_td"] + (rec_yds >= 100) * s["rec_100_bonus"]
+        + fumbles * s["fumble_lost"] + two_pt * s["two_pt"] + col(df, "special_teams_tds") * s["return_td"]
+    )
+
+
+def load_stats(season: int) -> pd.DataFrame | None:
+    url = STATS_URL.format(season=season)
+    try:
+        df = pd.read_csv(url, low_memory=False)
+    except Exception as e:  # file won't exist before a season starts
+        log(f"  could not load {season} stats ({e}); skipping")
+        return None
+    return df[df["season_type"] == "REG"].copy()
+
+
+def points_allowed_per_game(stats: pd.DataFrame, before_week: int | None = None) -> pd.DataFrame:
+    """Rows: defense team, Columns: QB/RB/WR/TE, Values: avg DK points allowed per game,
+    plus a 'games' column with how many games that average is based on."""
+    df = stats
+    if before_week is not None:
+        df = df[df["week"] < before_week]
+    if df.empty:
+        return pd.DataFrame(columns=POSITIONS + ["games"])
+    df = df.assign(pos=df["position"].replace(POSITION_MAP), pts=dk_points(df))
+    df = df[df["pos"].isin(POSITIONS)]
+    # total allowed to each position in each game, then average across games
+    per_game = df.groupby(["opponent_team", "week", "pos"])["pts"].sum().unstack("pos").fillna(0.0)
+    per_game = per_game.reindex(columns=POSITIONS, fill_value=0.0)
+    avg = per_game.groupby(level="opponent_team").mean()
+    avg["games"] = per_game.groupby(level="opponent_team").size()
+    return avg
+
+
+def detect_week(schedule: pd.DataFrame, season: int) -> int:
+    """First regular-season week that still has an unplayed game."""
+    reg = schedule[(schedule["season"] == season) & (schedule["game_type"] == "REG")]
+    unplayed = reg[reg["home_score"].isna()]
+    if unplayed.empty:
+        raise SystemExit(f"No unplayed regular-season games left in {season}.")
+    return int(unplayed["week"].min())
+
+
+def current_season() -> int:
+    now = datetime.now(timezone.utc)
+    return now.year if now.month >= 3 else now.year - 1  # Jan/Feb belong to last season
+
+
+def expand_aliases(mapping: dict) -> dict:
+    out = dict(mapping)
+    for canon, aliases in TEAM_ALIASES.items():
+        if canon in mapping:
+            for a in aliases:
+                out[a] = mapping[canon]
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Main build
+# ---------------------------------------------------------------------------
+def build(season: int, week: int | None) -> dict:
+    log("Loading schedule...")
+    schedule = pd.read_csv(SCHEDULE_URL, low_memory=False)
+    if week is None:
+        week = detect_week(schedule, season)
+    log(f"Building Season {season}, Week {week}")
+
+    games = schedule[(schedule["season"] == season) & (schedule["week"] == week) & (schedule["game_type"] == "REG")]
+    if games.empty:
+        raise SystemExit(f"No regular-season games found for {season} week {week}.")
+
+    matchups, implied = {}, {}
+    for g in games.itertuples():
+        matchups[g.home_team], matchups[g.away_team] = g.away_team, g.home_team
+        # nfldata spread_line is from the home team's view (positive = home favored)
+        if pd.notna(g.spread_line) and pd.notna(g.total_line):
+            implied[g.home_team] = round((g.total_line + g.spread_line) / 2, 1)
+            implied[g.away_team] = round((g.total_line - g.spread_line) / 2, 1)
+
+    log("Loading player stats...")
+    cur_stats = load_stats(season)
+    cur = points_allowed_per_game(cur_stats, before_week=week) if cur_stats is not None else points_allowed_per_game(pd.DataFrame())
+    prior = pd.DataFrame(columns=POSITIONS + ["games"])
+    if PRIOR_WEIGHT > 0:
+        prior_stats = load_stats(season - 1)
+        if prior_stats is not None:
+            prior = points_allowed_per_game(prior_stats)
+
+    teams = sorted(set(cur.index) | set(prior.index) | set(matchups))
+    defense = {}
+    for t in teams:
+        n = float(cur.loc[t, "games"]) if t in cur.index else 0.0
+        k = float(PRIOR_WEIGHT) if t in prior.index else 0.0
+        if n + k == 0:
+            continue
+        defense[t] = {
+            p: round(
+                ((cur.loc[t, p] * n if n else 0.0) + (prior.loc[t, p] * k if k else 0.0)) / (n + k), 1
+            )
+            for p in POSITIONS
+        }
+
+    cur_games = int(cur["games"].max()) if not cur.empty else 0
+    blend = f", blended with {season - 1} at a {PRIOR_WEIGHT}-game weight" if PRIOR_WEIGHT else ""
+    return {
+        "week": week,
+        "matchups": expand_aliases(matchups),
+        "defenseAverages": expand_aliases(defense),
+        "vegasImplied": expand_aliases(implied),
+        "source": (
+            f"nflverse player stats (DK scoring FPA through {season} Week {week - 1}, "
+            f"up to {cur_games} game(s){blend}) + nflverse schedule/lines. Auto-generated."
+        ),
+        "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    }
+
+
+def validate(data: dict) -> list[str]:
+    """Return a list of problems. Any problem fails the run, so bad data never ships."""
+    problems = []
+    m, d = data["matchups"], data["defenseAverages"]
+    canon = [t for t in m if t not in {a for al in TEAM_ALIASES.values() for a in al}]
+    if len(canon) < 20:
+        problems.append(f"Only {len(canon)} teams have a matchup (expected 26-32; byes reduce it).")
+    for team, opp in m.items():
+        if opp not in d:
+            problems.append(f"{team}'s opponent {opp} has no defense averages.")
+        if m.get(opp) != team and team in canon:
+            problems.append(f"Matchup not symmetric: {team} -> {opp} -> {m.get(opp)}")
+    for team, row in d.items():
+        for p in POSITIONS:
+            v = row.get(p)
+            if v is None or not (0 <= v <= 60):
+                problems.append(f"{team} {p} value looks wrong: {v}")
+    return problems
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--season", type=int, default=current_season())
+    ap.add_argument("--week", type=int, default=None, help="default: next week with unplayed games")
+    ap.add_argument("--out", default="data", help="output folder")
+    args = ap.parse_args()
+
+    data = build(args.season, args.week)
+    problems = validate(data)
+    if problems:
+        log("VALIDATION FAILED - no file written:")
+        for p in problems:
+            log("  - " + p)
+        sys.exit(1)
+
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(data, indent=2)
+    (out / f"week{data['week']}_opponent_data.json").write_text(text)
+    (out / "latest.json").write_text(text)
+    log(f"Wrote {out}/week{data['week']}_opponent_data.json and {out}/latest.json "
+        f"({len(data['matchups'])} matchup keys, {len(data['defenseAverages'])} defense keys)")
+
+
+if __name__ == "__main__":
+    main()
