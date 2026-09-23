@@ -3,15 +3,19 @@
 Build the weekly opponent-data JSON for the 4th & Go Season Command Center.
 
 Pulls free public data from nflverse (the same project the dashboard already
-uses for rosters and player stats), computes DraftKings-scoring fantasy points
-allowed by each defense to QB/RB/WR/TE, and writes a file in exactly the shape
-the dashboard's Opponent Data importer expects:
+uses for rosters and player stats), scores everything with your league's rules,
+and writes one weekly file the dashboard imports with one click:
+  - who each NFL team plays this week and the fantasy points each defense allows
+    to QB/RB/WR/TE (fills Opponent / Opp Pos Avg)
+  - every player's points from the week just finished (fills Actual)
+Shape:
 
     {
       "week": 3,
       "matchups":        {"ATL": "GB", "GB": "ATL", ...},
       "defenseAverages": {"GB": {"QB": 16.6, "RB": 22.8, "WR": 33.2, "TE": 11.5}, ...},
       "vegasImplied":    {"ATL": 19.0, "GB": 23.5, ...},    # optional extra
+      "playerPoints":    {"week": 2, "players": [{"name": "Lamar Jackson", "team": "BAL", "pos": "QB", "pts": 16.8}, ...]},
       "source": "...",
       "updated": "2026-09-23T12:00:00Z"
     }
@@ -55,13 +59,22 @@ PRIOR_WEIGHT = 4
 # player carries.
 TEAM_ALIASES = {"JAX": ["JAC"], "LA": ["LAR"], "WAS": ["WSH"]}
 
-# DraftKings classic scoring. Change these if your league scores differently
-# (e.g. half-PPR: set "reception" to 0.5 and drop the yardage bonuses).
+# Your Yahoo league's scoring rules (from League > Settings). Used for both the
+# defense averages and the weekly actual points, so the two always compare fairly.
 SCORING = {
-    "pass_yd": 0.04, "pass_td": 4, "pass_int": -1, "pass_300_bonus": 3,
-    "rush_yd": 0.1, "rush_td": 6, "rush_100_bonus": 3,
-    "reception": 1, "rec_yd": 0.1, "rec_td": 6, "rec_100_bonus": 3,
-    "fumble_lost": -1, "two_pt": 2, "return_td": 6,
+    # offense
+    "pass_yds_per_pt": 25, "pass_td": 4, "pass_int": -1,
+    "rush_att": 0.25, "rush_yds_per_pt": 10, "rush_td": 6,
+    "reception": 0.5, "rec_yds_per_pt": 10, "rec_td": 6,
+    "return_td": 6, "two_pt": 2, "fumble_lost": -2, "off_fumble_return_td": 6,
+    # kickers
+    "fg_0_19": 3, "fg_20_29": 3, "fg_30_39": 3, "fg_40_49": 4, "fg_50_plus": 5,
+    "fg_miss_0_19": -4, "fg_miss_20_29": -3, "fg_miss_30_39": -2, "fg_miss_40_49": -1,
+    "pat_made": 1, "pat_missed": -2,
+    # defensive players (IDP)
+    "tackle_solo": 1, "tackle_assist": 0.5, "sack": 2, "def_int": 3,
+    "fumble_forced": 2, "fumble_recovery": 2, "def_td": 4, "safety": 2,
+    "pass_defended": 1, "blocked_kick": 2,
 }
 
 
@@ -80,19 +93,61 @@ def col(df: pd.DataFrame, name: str) -> pd.Series:
     return pd.to_numeric(df[name], errors="coerce").fillna(0.0)
 
 
-def dk_points(df: pd.DataFrame) -> pd.Series:
+def league_points(df: pd.DataFrame) -> pd.Series:
     s = SCORING
-    pass_yds, rush_yds, rec_yds = col(df, "passing_yards"), col(df, "rushing_yards"), col(df, "receiving_yards")
     fumbles = col(df, "sack_fumbles_lost") + col(df, "rushing_fumbles_lost") + col(df, "receiving_fumbles_lost")
     two_pt = col(df, "passing_2pt_conversions") + col(df, "rushing_2pt_conversions") + col(df, "receiving_2pt_conversions")
-    return (
-        pass_yds * s["pass_yd"] + col(df, "passing_tds") * s["pass_td"]
-        + col(df, "passing_interceptions") * s["pass_int"] + (pass_yds >= 300) * s["pass_300_bonus"]
-        + rush_yds * s["rush_yd"] + col(df, "rushing_tds") * s["rush_td"] + (rush_yds >= 100) * s["rush_100_bonus"]
-        + col(df, "receptions") * s["reception"] + rec_yds * s["rec_yd"]
-        + col(df, "receiving_tds") * s["rec_td"] + (rec_yds >= 100) * s["rec_100_bonus"]
-        + fumbles * s["fumble_lost"] + two_pt * s["two_pt"] + col(df, "special_teams_tds") * s["return_td"]
+    offense = (
+        col(df, "passing_yards") / s["pass_yds_per_pt"] + col(df, "passing_tds") * s["pass_td"]
+        + col(df, "passing_interceptions") * s["pass_int"]
+        + col(df, "carries") * s["rush_att"] + col(df, "rushing_yards") / s["rush_yds_per_pt"]
+        + col(df, "rushing_tds") * s["rush_td"]
+        + col(df, "receptions") * s["reception"] + col(df, "receiving_yards") / s["rec_yds_per_pt"]
+        + col(df, "receiving_tds") * s["rec_td"]
+        + col(df, "special_teams_tds") * s["return_td"] + two_pt * s["two_pt"] + fumbles * s["fumble_lost"]
     )
+    kicking = (
+        col(df, "fg_made_0_19") * s["fg_0_19"] + col(df, "fg_made_20_29") * s["fg_20_29"]
+        + col(df, "fg_made_30_39") * s["fg_30_39"] + col(df, "fg_made_40_49") * s["fg_40_49"]
+        + (col(df, "fg_made_50_59") + col(df, "fg_made_60_")) * s["fg_50_plus"]
+        + col(df, "fg_missed_0_19") * s["fg_miss_0_19"] + col(df, "fg_missed_20_29") * s["fg_miss_20_29"]
+        + col(df, "fg_missed_30_39") * s["fg_miss_30_39"] + col(df, "fg_missed_40_49") * s["fg_miss_40_49"]
+        + col(df, "pat_made") * s["pat_made"] + col(df, "pat_missed") * s["pat_missed"]
+    )
+    defense = (
+        col(df, "def_tackles_solo") * s["tackle_solo"] + col(df, "def_tackle_assists") * s["tackle_assist"]
+        + col(df, "def_sacks") * s["sack"] + col(df, "def_interceptions") * s["def_int"]
+        + col(df, "def_fumbles_forced") * s["fumble_forced"] + col(df, "fumble_recovery_opp") * s["fumble_recovery"]
+        + col(df, "def_tds") * s["def_td"] + col(df, "def_safeties") * s["safety"]
+        + col(df, "def_pass_defended") * s["pass_defended"]
+        + (col(df, "def_fg_blocks") + col(df, "def_punt_blocks") + col(df, "def_pat_blocks")) * s["blocked_kick"]
+    )
+    # A fumble recovered by the offense and returned for a TD shows up here for skill players
+    off_fr_td = col(df, "fumble_recovery_tds") * df["position"].isin(["QB", "RB", "WR", "TE", "FB"])
+    return offense + kicking + defense + off_fr_td * s["off_fumble_return_td"]
+
+
+def player_points_for_week(stats: pd.DataFrame, schedule: pd.DataFrame, season: int, week: int) -> dict | None:
+    """Every player's league-scored points for one finished week, or None if that
+    week's stats aren't complete yet (then the dashboard simply gets no points)."""
+    games = schedule[(schedule["season"] == season) & (schedule["week"] == week) & (schedule["game_type"] == "REG")]
+    played = set(games.loc[games["home_score"].notna(), "home_team"]) | set(games.loc[games["home_score"].notna(), "away_team"])
+    wk = stats[stats["week"] == week]
+    if not played or len(games) != len(games[games["home_score"].notna()]):
+        log(f"  Week {week} games aren't all final yet; skipping player points.")
+        return None
+    missing = played - set(wk["team"])
+    if missing:
+        log(f"  Week {week} stats not posted yet for {sorted(missing)}; skipping player points.")
+        return None
+    wk = wk[wk["player_display_name"].notna()]  # a few rows have no name; skip them
+    wk = wk.assign(pts=league_points(wk).round(2))
+    players = [
+        {"name": str(r.player_display_name), "team": str(r.team) if pd.notna(r.team) else "",
+         "pos": str(r.position) if pd.notna(r.position) else "", "pts": float(r.pts)}
+        for r in wk.itertuples()
+    ]
+    return {"week": week, "count": len(players), "players": players}
 
 
 def load_stats(season: int) -> pd.DataFrame | None:
@@ -106,14 +161,14 @@ def load_stats(season: int) -> pd.DataFrame | None:
 
 
 def points_allowed_per_game(stats: pd.DataFrame, before_week: int | None = None) -> pd.DataFrame:
-    """Rows: defense team, Columns: QB/RB/WR/TE, Values: avg DK points allowed per game,
+    """Rows: defense team, Columns: QB/RB/WR/TE, Values: avg league-scored points allowed per game,
     plus a 'games' column with how many games that average is based on."""
     df = stats
     if before_week is not None:
         df = df[df["week"] < before_week]
     if df.empty:
         return pd.DataFrame(columns=POSITIONS + ["games"])
-    df = df.assign(pos=df["position"].replace(POSITION_MAP), pts=dk_points(df))
+    df = df.assign(pos=df["position"].replace(POSITION_MAP), pts=league_points(df))
     df = df[df["pos"].isin(POSITIONS)]
     # total allowed to each position in each game, then average across games
     per_game = df.groupby(["opponent_team", "week", "pos"])["pts"].sum().unstack("pos").fillna(0.0)
@@ -191,19 +246,27 @@ def build(season: int, week: int | None) -> dict:
             for p in POSITIONS
         }
 
+    points = None
+    if cur_stats is not None and week > 1:
+        log(f"Scoring Week {week - 1} player points...")
+        points = player_points_for_week(cur_stats, schedule, season, week - 1)
+
     cur_games = int(cur["games"].max()) if not cur.empty else 0
     blend = f", blended with {season - 1} at a {PRIOR_WEIGHT}-game weight" if PRIOR_WEIGHT else ""
-    return {
+    data = {
         "week": week,
         "matchups": expand_aliases(matchups),
         "defenseAverages": expand_aliases(defense),
         "vegasImplied": expand_aliases(implied),
         "source": (
-            f"nflverse player stats (DK scoring FPA through {season} Week {week - 1}, "
+            f"nflverse player stats (league-scoring FPA through {season} Week {week - 1}, "
             f"up to {cur_games} game(s){blend}) + nflverse schedule/lines. Auto-generated."
         ),
         "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
+    if points:
+        data["playerPoints"] = points
+    return data
 
 
 def validate(data: dict) -> list[str]:
@@ -243,11 +306,12 @@ def main() -> None:
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(data, indent=2)
+    text = json.dumps(data, indent=2, allow_nan=False)  # fail loudly rather than write invalid JSON
     (out / f"week{data['week']}_opponent_data.json").write_text(text)
     (out / "latest.json").write_text(text)
     log(f"Wrote {out}/week{data['week']}_opponent_data.json and {out}/latest.json "
-        f"({len(data['matchups'])} matchup keys, {len(data['defenseAverages'])} defense keys)")
+        f"({len(data['matchups'])} matchup keys, {len(data['defenseAverages'])} defense keys, "
+        f"{data['playerPoints']['count'] if 'playerPoints' in data else 0} player scores)")
 
 
 if __name__ == "__main__":
