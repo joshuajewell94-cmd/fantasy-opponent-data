@@ -9,6 +9,7 @@ and writes one weekly file the dashboard imports with one click:
     to QB/RB/WR/TE (fills Opponent / Opp Pos Avg)
   - every player's points from the week just finished (fills Actual)
   - season-to-date usage: snap %, target/carry/red-zone/air-yards share (fills Snap %, RZ %)
+  - internal projections for the upcoming week, from a model re-trained every week (fills Internal Proj)
 Shape:
 
     {
@@ -238,6 +239,162 @@ def usage_through(stats: pd.DataFrame, season: int, before_week: int) -> dict | 
     return {"throughWeek": before_week - 1, "count": len(out), "players": out}
 
 
+# ---------------------------------------------------------------------------
+# Internal projection engine
+# ---------------------------------------------------------------------------
+# projection = scale * base * (opponent factor ^ a) * (team factor ^ b), per position group
+#   base            player's points per game (this season, blended with last season early on)
+#   opponent factor how generous this week's opponent is to his position group, vs league average
+#                   (for IDP this is the offense he faces: offenses that run lots of plays feed tackles)
+#   team factor     his team's Vegas implied points this week, vs the league average that week
+# a, b and scale are re-learned every week from every past game (last two seasons, with this
+# season's games counted double), so the model adjusts as the season teaches it more.
+PROJ_GROUPS = {
+    "QB": "QB", "RB": "RB", "FB": "RB", "WR": "WR", "TE": "TE", "K": "K",
+    "DE": "DL", "DT": "DL", "NT": "DL", "DL": "DL",
+    "LB": "LB", "ILB": "LB", "OLB": "LB", "MLB": "LB",
+    "CB": "DB", "S": "DB", "SAF": "DB", "FS": "DB", "SS": "DB", "DB": "DB",
+}
+BASE_PRIOR_GAMES = 3      # how many games of last season's average to blend into a player's base
+FPA_PRIOR_GAMES = 4       # same idea for how generous a defense/offense is
+GRID = [round(x * 0.1, 1) for x in range(0, 16)]
+
+
+def _season_table(stats: pd.DataFrame | None) -> pd.DataFrame | None:
+    if stats is None:
+        return None
+    t = stats[stats["player_display_name"].notna()].copy()
+    t["grp"] = t["position"].map(PROJ_GROUPS)
+    t = t[t["grp"].notna()]
+    t["pts"] = league_points(t)
+    t["team"] = t["team"].map(_canon_team)
+    t["opp"] = t["opponent_team"].map(_canon_team)
+    return t[["player_id", "player_display_name", "team", "opp", "grp", "week", "pts"]].sort_values(["week", "player_id"])
+
+
+def _implied_table(schedule: pd.DataFrame, season: int) -> dict:
+    out = {}
+    g = schedule[(schedule["season"] == season) & (schedule["game_type"] == "REG")]
+    for r in g.itertuples():
+        if pd.notna(r.spread_line) and pd.notna(r.total_line):
+            out[(int(r.week), _canon_team(r.home_team))] = (r.total_line + r.spread_line) / 2
+            out[(int(r.week), _canon_team(r.away_team))] = (r.total_line - r.spread_line) / 2
+    return out
+
+
+def _fpa_before(t: pd.DataFrame, prior: pd.DataFrame | None, week: int) -> pd.Series:
+    """Points allowed per game by each team (as opponent) to each group, before `week`,
+    blended with last season. Returned as a ratio to the league average for that group."""
+    cur = t[t["week"] < week].groupby(["opp", "grp", "week"])["pts"].sum()
+    cur_sum = cur.groupby(level=["opp", "grp"]).sum()
+    cur_n = cur.groupby(level=["opp", "grp"]).size()
+    if prior is not None:
+        pr = prior.groupby(["opp", "grp", "week"])["pts"].sum().groupby(level=["opp", "grp"]).mean()
+        idx = cur_sum.index.union(pr.index)
+        cs, cn, pm = cur_sum.reindex(idx, fill_value=0), cur_n.reindex(idx, fill_value=0), pr.reindex(idx)
+        fpa = ((cs + FPA_PRIOR_GAMES * pm.fillna(0)) / (cn + FPA_PRIOR_GAMES * pm.notna())).where(cn + pm.notna() > 0)
+    else:
+        fpa = cur_sum / cur_n
+    fpa = fpa.dropna()
+    league = fpa.groupby(level="grp").mean()
+    return fpa / fpa.index.get_level_values("grp").map(league).values
+
+
+def _base_before(t: pd.DataFrame, prior: pd.DataFrame | None, week: int) -> pd.DataFrame:
+    cur = t[t["week"] < week].groupby("player_id")["pts"].agg(["sum", "count"])
+    pm = prior.groupby("player_id")["pts"].mean() if prior is not None else pd.Series(dtype=float)
+    idx = cur.index.union(pm.index)
+    cs, cn, p = cur["sum"].reindex(idx, fill_value=0), cur["count"].reindex(idx, fill_value=0), pm.reindex(idx)
+    k = BASE_PRIOR_GAMES * p.notna()
+    base = (cs + k * p.fillna(0)) / (cn + k)
+    return pd.DataFrame({"base": base.where(cn + k > 0), "games": cn})
+
+
+def _training_rows(t: pd.DataFrame, prior: pd.DataFrame | None, implied: dict, weight: float) -> pd.DataFrame:
+    rows = []
+    for w in sorted(t["week"].unique()):
+        wk = t[t["week"] == w]
+        base = _base_before(t, prior, w)
+        fpa = _fpa_before(t, prior, w)
+        imp_w = {tm: v for (ww, tm), v in implied.items() if ww == w}
+        avg_imp = sum(imp_w.values()) / len(imp_w) if imp_w else None
+        x = wk.join(base, on="player_id")
+        x["opp_f"] = [fpa.get((o, g)) for o, g in zip(x["opp"], x["grp"])]
+        x["team_f"] = [imp_w.get(tm, avg_imp) / avg_imp if avg_imp else 1.0 for tm in x["team"]]
+        rows.append(x)
+    df = pd.concat(rows) if rows else pd.DataFrame()
+    df = df.dropna(subset=["base", "opp_f"])
+    df = df[df["base"] > 0]
+    df["wt"] = weight
+    return df
+
+
+def _fit_group(d: pd.DataFrame) -> dict:
+    y, base, of, tf, wt = (d[c].to_numpy(dtype=float) for c in ["pts", "base", "opp_f", "team_f", "wt"])
+    best = None
+    for a in GRID:
+        for b in GRID:
+            x = base * of ** a * tf ** b
+            c = (wt * x * y).sum() / (wt * x * x).sum()
+            err = (wt * (y - c * x) ** 2).sum()
+            if best is None or err < best[0]:
+                best = (err, a, b, c)
+    _, a, b, c = best
+    pred = c * base * of ** a * tf ** b
+    naive_c = (wt * base * y).sum() / (wt * base * base).sum()
+    return {"a": a, "b": b, "scale": round(float(c), 3), "n": int(len(d)),
+            "mae_model": round(float((wt * abs(y - pred)).sum() / wt.sum()), 2),
+            "mae_average_only": round(float((wt * abs(y - naive_c * base)).sum() / wt.sum()), 2)}
+
+
+def build_projections(season: int, week: int, schedule: pd.DataFrame, matchups: dict,
+                      cur_stats: pd.DataFrame | None) -> dict | None:
+    log("Training projection model...")
+    cur = _season_table(cur_stats)
+    prev = _season_table(load_stats(season - 1))
+    prev2 = _season_table(load_stats(season - 2))
+    if cur is None and prev is None:
+        return None
+    cur_train = cur[cur["week"] < week] if cur is not None else None
+    parts = []
+    if prev is not None:
+        parts.append(_training_rows(prev, prev2, _implied_table(schedule, season - 1), 1.0))
+    if cur_train is not None and not cur_train.empty:
+        parts.append(_training_rows(cur_train, prev, _implied_table(schedule, season), 2.0))
+    train = pd.concat(parts)
+    models = {g: _fit_group(d) for g, d in train.groupby("grp") if len(d) >= 50}
+
+    # features for the week being projected
+    t_now = cur_train if cur_train is not None else prev.iloc[0:0]
+    base = _base_before(t_now, prev, week)
+    fpa = _fpa_before(t_now, prev, week)
+    implied = _implied_table(schedule, season)
+    imp_w = {tm: v for (w, tm), v in implied.items() if w == week}
+    avg_imp = sum(imp_w.values()) / len(imp_w) if imp_w else None
+    latest = pd.concat([x for x in [prev, t_now] if x is not None]).sort_values("week").groupby("player_id").tail(1)
+    if cur_train is not None and not cur_train.empty:  # prefer this season's team and position
+        latest = pd.concat([latest, cur_train.sort_values("week").groupby("player_id").tail(1)]).groupby("player_id").tail(1)
+    out = []
+    for r in latest.itertuples():
+        m = models.get(r.grp)
+        opp = matchups.get(r.team)
+        if m is None or opp is None or r.player_id not in base.index:
+            continue
+        b0 = base.loc[r.player_id, "base"]
+        if pd.isna(b0) or b0 <= 0:
+            continue
+        of = fpa.get((opp, r.grp), 1.0)
+        tf = (imp_w.get(r.team, avg_imp) / avg_imp) if avg_imp else 1.0
+        proj = m["scale"] * b0 * of ** m["a"] * tf ** m["b"]
+        out.append({"name": str(r.player_display_name), "team": r.team, "grp": r.grp, "opp": opp,
+                    "proj": round(float(proj), 2), "base": round(float(b0), 2),
+                    "oppFactor": round(float(of), 2), "teamFactor": round(float(tf), 2),
+                    "games": int(base.loc[r.player_id, "games"])})
+    log(f"  projected {len(out)} players; model by group: " +
+        ", ".join(f"{g} a={m['a']} b={m['b']}" for g, m in sorted(models.items())))
+    return {"week": week, "models": models, "count": len(out), "players": out}
+
+
 def player_points_for_week(stats: pd.DataFrame, schedule: pd.DataFrame, season: int, week: int) -> dict | None:
     """Every player's league-scored points for one finished week, or None if that
     week's stats aren't complete yet (then the dashboard simply gets no points)."""
@@ -367,6 +524,17 @@ def build(season: int, week: int | None) -> dict:
         log("Building usage percentages...")
         usage = usage_through(cur_stats, season, week)
 
+    projections = build_projections(season, week, schedule, matchups, cur_stats)
+    # Also re-create last week's projections exactly as they would have been made before
+    # last week's games (model trained only on earlier games), so the dashboard can grade them.
+    projections_prev = None
+    if week > 2:
+        prev_games = schedule[(schedule["season"] == season) & (schedule["week"] == week - 1) & (schedule["game_type"] == "REG")]
+        prev_matchups = {}
+        for g in prev_games.itertuples():
+            prev_matchups[_canon_team(g.home_team)], prev_matchups[_canon_team(g.away_team)] = _canon_team(g.away_team), _canon_team(g.home_team)
+        projections_prev = build_projections(season, week - 1, schedule, prev_matchups, cur_stats)
+
     cur_games = int(cur["games"].max()) if not cur.empty else 0
     blend = f", blended with {season - 1} at a {PRIOR_WEIGHT}-game weight" if PRIOR_WEIGHT else ""
     data = {
@@ -384,6 +552,10 @@ def build(season: int, week: int | None) -> dict:
         data["playerPoints"] = points
     if usage:
         data["usage"] = usage
+    if projections:
+        data["projections"] = projections
+    if projections_prev:
+        data["projectionsLastWeek"] = projections_prev
     return data
 
 
@@ -430,7 +602,8 @@ def main() -> None:
     log(f"Wrote {out}/week{data['week']}_opponent_data.json and {out}/latest.json "
         f"({len(data['matchups'])} matchup keys, {len(data['defenseAverages'])} defense keys, "
         f"{data['playerPoints']['count'] if 'playerPoints' in data else 0} player scores, "
-        f"{data['usage']['count'] if 'usage' in data else 0} usage profiles)")
+        f"{data['usage']['count'] if 'usage' in data else 0} usage profiles, "
+        f"{data['projections']['count'] if 'projections' in data else 0} projections)")
 
 
 if __name__ == "__main__":
