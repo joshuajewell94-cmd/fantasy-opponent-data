@@ -178,6 +178,7 @@ def usage_through(stats: pd.DataFrame, season: int, before_week: int) -> dict | 
     st["team"] = st["team"].map(_canon_team)
     st["tgt"], st["car"] = col(st, "targets"), col(st, "carries")
     st["air"] = col(st, "receiving_air_yards").clip(lower=0)
+    st["fpts"] = league_points(st)
     team_wk = st.groupby(["team", "week"])[["tgt", "car", "air"]].sum().add_prefix("team_")
     st = st.join(team_wk, on=["team", "week"])
 
@@ -237,7 +238,10 @@ def usage_through(stats: pd.DataFrame, season: int, before_week: int) -> dict | 
             "airShare": pct(g["air"].sum(), g["team_air"].sum()),
             "rzShare": pct(g["rz"].sum(), g["team_rz"].sum()) if have_rz else None,
         }
-        lg = g.sort_values("week").iloc[-1]
+        gs = g.sort_values("week")
+        rec["ppg"] = round(float(gs["fpts"].mean()), 2)
+        rec["ppgLast3"] = round(float(gs["fpts"].tail(3).mean()), 2)
+        lg = gs.iloc[-1]
         rec["lastWeek"] = int(lg["week"])
         rec["targetShareLast"] = pct(lg["tgt"], lg["team_tgt"])
         rec["carryShareLast"] = pct(lg["car"], lg["team_car"])
@@ -503,6 +507,8 @@ def build_projections(season: int, week: int, schedule: pd.DataFrame, matchups: 
         ro = ro[ro["week"] == ro["week"].max()]
         team_now = {r.gsis_id: _canon_team(r.team) for r in ro.itertuples() if pd.notna(r.gsis_id)}
     ph = latest[["player_id", "player_display_name", "team", "grp"]].copy()
+    if team_now:  # only project players who are on an NFL roster right now
+        ph = ph[ph["player_id"].isin(team_now)]
     ph["team"] = [team_now.get(pid, tm) for pid, tm in zip(ph["player_id"], ph["team"])]
     ph["opp"] = ph["team"].map(matchups)
     ph = ph[ph["opp"].notna()]
@@ -515,6 +521,16 @@ def build_projections(season: int, week: int, schedule: pd.DataFrame, matchups: 
     feats = _add_context(feats, cur_before if not cur_before.empty else prev.iloc[0:0], prev,
                          _implied_table(schedule, season))
     avail = _availability(season, week)
+    # Healthy players who haven't played a snap this season after 2+ weeks are backups or inactive:
+    # project them at 0. Players who missed time on the injury report keep their projection.
+    if week >= 3 and not cur_before.empty:
+        played = set(cur_before["player_id"])
+        inj = _load_optional(INJURIES_URL.format(season=season))
+        hurt = set(inj.loc[inj["week"] < week, "gsis_id"]) if inj is not None and not inj.empty else set()
+        for pid in feats["player_id"]:
+            if pid in played or pid in avail:
+                continue
+            avail[pid] = (1.0, "Returning from injury") if pid in hurt else (0.0, "Hasn't played this season")
 
     feats = feats[feats["e_pts"].notna() & (feats["e_pts"] > 0) & feats["grp"].isin(list(models))].copy()
     feats["raw"] = 0.0
