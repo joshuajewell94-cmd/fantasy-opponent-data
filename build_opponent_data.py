@@ -729,6 +729,16 @@ def build(season: int, week: int | None) -> dict:
         data["usage"] = usage
     if season_points:
         data["seasonPoints"] = season_points
+    inj = _load_optional(INJURIES_URL.format(season=season))
+    if inj is not None and not inj.empty:
+        iw = inj[(inj["week"] == week) & (inj["season_type"] == "REG")]
+        data["injuryReport"] = {"week": week, "players": [
+            {"name": str(r.full_name), "team": _canon_team(r.team), "pos": str(r.position),
+             "injury": str(r.report_primary_injury if isinstance(r.report_primary_injury, str) else
+                           (r.practice_primary_injury if isinstance(r.practice_primary_injury, str) else "")),
+             "practice": str(r.practice_status) if isinstance(r.practice_status, str) else "",
+             "status": str(r.report_status) if isinstance(r.report_status, str) else ""}
+            for r in iw.itertuples()]}
     if projections:
         data["projections"] = projections
     if projections_prev:
