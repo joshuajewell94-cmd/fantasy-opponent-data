@@ -429,34 +429,34 @@
   "byeWeeks": {
     "CAR": 5,
     "KC": 5,
-    "DET": 6,
     "MIN": 6,
-    "MIA": 6,
     "CIN": 6,
-    "WAS": 7,
+    "MIA": 6,
+    "DET": 6,
     "BUF": 7,
     "LAC": 7,
+    "WAS": 7,
     "JAX": 7,
     "NO": 8,
-    "SF": 8,
-    "NYG": 8,
     "HOU": 8,
-    "PIT": 9,
+    "NYG": 8,
+    "SF": 8,
     "TEN": 9,
-    "TB": 10,
+    "PIT": 9,
     "DEN": 10,
-    "CHI": 10,
+    "TB": 10,
     "PHI": 10,
-    "SEA": 11,
+    "CHI": 10,
     "LA": 11,
-    "CLE": 11,
     "GB": 11,
     "ATL": 11,
     "NE": 11,
-    "NYJ": 13,
+    "CLE": 11,
+    "SEA": 11,
     "IND": 13,
-    "BAL": 13,
+    "NYJ": 13,
     "LV": 13,
+    "BAL": 13,
     "ARI": 14,
     "DAL": 14,
     "JAC": 7,
@@ -464,7 +464,7 @@
     "WSH": 7
   },
   "source": "nflverse player stats (league-scoring FPA through 2026 Week 2, up to 2 game(s), blended with 2025 at a 4-game weight) + nflverse schedule/lines. Auto-generated.",
-  "updated": "2026-09-24T19:46:48Z",
+  "updated": "2026-09-24T19:56:21Z",
   "playerPoints": {
     "week": 2,
     "count": 1106,
@@ -33562,6 +33562,10167 @@
         "carryShareLast": 0.0,
         "defSnap": 54.0,
         "defSnapLast": 70.0
+      }
+    ]
+  },
+  "seasonPoints": {
+    "throughWeek": 2,
+    "players": [
+      {
+        "name": "A'Shawn Robinson",
+        "team": "TB",
+        "pos": "DT",
+        "weeks": {
+          "1": 4.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "A.J. Brown",
+        "team": "NE",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.1
+        }
+      },
+      {
+        "name": "A.J. Epenesa",
+        "team": "PHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "A.J. Haulcy",
+        "team": "IND",
+        "pos": "SAF",
+        "weeks": {
+          "1": 5.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "A.J. Terrell",
+        "team": "ATL",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "AJ Barner",
+        "team": "SEA",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.3,
+          "2": 7.65
+        }
+      },
+      {
+        "name": "AJ Dillon",
+        "team": "CAR",
+        "pos": "RB",
+        "weeks": {
+          "1": 4.05,
+          "2": 1.45
+        }
+      },
+      {
+        "name": "AJ Finley",
+        "team": "SEA",
+        "pos": "SAF",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Aaron Donald",
+        "team": "LA",
+        "pos": "DE",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Aaron Hall",
+        "team": "CAR",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Aaron Jones",
+        "team": "MIN",
+        "pos": "RB",
+        "weeks": {
+          "1": 13.0,
+          "2": 16.25
+        }
+      },
+      {
+        "name": "Aaron Rodgers",
+        "team": "PIT",
+        "pos": "QB",
+        "weeks": {
+          "1": 13.29,
+          "2": 6.23
+        }
+      },
+      {
+        "name": "Abdul Carter",
+        "team": "NYG",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Adam Butler",
+        "team": "LV",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Adam Prentice",
+        "team": "DEN",
+        "pos": "FB",
+        "weeks": {
+          "2": 1.7
+        }
+      },
+      {
+        "name": "Adam Trautman",
+        "team": "DEN",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Adetomiwa Adebawore",
+        "team": "IND",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.5
+        }
+      },
+      {
+        "name": "Adin Huntington",
+        "team": "CLE",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Adonai Mitchell",
+        "team": "NYJ",
+        "pos": "WR",
+        "weeks": {
+          "1": 7.5,
+          "2": 9.3
+        }
+      },
+      {
+        "name": "Aeneas Peebles",
+        "team": "BAL",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Aidan Hutchinson",
+        "team": "DET",
+        "pos": "DE",
+        "weeks": {
+          "1": 8.5,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Aiden Fisher",
+        "team": "HOU",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Akayleb Evans",
+        "team": "CAR",
+        "pos": "CB",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Akeem Davis-Gaither",
+        "team": "IND",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.5,
+          "2": 10.5
+        }
+      },
+      {
+        "name": "Akheem Mesidor",
+        "team": "LAC",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Al-Quadin Muhammad",
+        "team": "TB",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Albert Regis",
+        "team": "JAX",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Ale Kaho",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Alec Ingold",
+        "team": "LAC",
+        "pos": "FB",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Alec Pierce",
+        "team": "IND",
+        "pos": "WR",
+        "weeks": {
+          "1": 8.1,
+          "2": 1.6
+        }
+      },
+      {
+        "name": "Alex Anzalone",
+        "team": "TB",
+        "pos": "MLB",
+        "weeks": {
+          "1": 4.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Alex Highsmith",
+        "team": "PIT",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Alex Singleton",
+        "team": "DEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 10.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Alijah Clark",
+        "team": "DAL",
+        "pos": "DB",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Alim McNeill",
+        "team": "DET",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Alohi Gilman",
+        "team": "KC",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Alontae Taylor",
+        "team": "TEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Alvin Kamara",
+        "team": "NO",
+        "pos": "RB",
+        "weeks": {
+          "2": 6.95
+        }
+      },
+      {
+        "name": "Amani Hooker",
+        "team": "TEN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 7.0,
+          "2": 8.5
+        }
+      },
+      {
+        "name": "Ameer Abdullah",
+        "team": "JAX",
+        "pos": "RB",
+        "weeks": {
+          "1": 4.7,
+          "2": 2.55
+        }
+      },
+      {
+        "name": "Amik Robertson",
+        "team": "WAS",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Amon-Ra St. Brown",
+        "team": "DET",
+        "pos": "WR",
+        "weeks": {
+          "1": 23.7,
+          "2": 30.7
+        }
+      },
+      {
+        "name": "Andre Cisco",
+        "team": "NYJ",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.0,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Andre Szmyt",
+        "team": "CLE",
+        "pos": "K",
+        "weeks": {
+          "1": 4.0,
+          "2": 13.0
+        }
+      },
+      {
+        "name": "Andrei Iosivas",
+        "team": "CIN",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.2,
+          "2": 1.2
+        }
+      },
+      {
+        "name": "Andrew Beck",
+        "team": "NYJ",
+        "pos": "FB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Andrew Mukuba",
+        "team": "PHI",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Andrew Ogletree",
+        "team": "IND",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Andrew Van Ginkel",
+        "team": "MIN",
+        "pos": "OLB",
+        "weeks": {
+          "1": 9.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Andrew Wingard",
+        "team": "ARI",
+        "pos": "SAF",
+        "weeks": {
+          "1": 9.5,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Andru Phillips",
+        "team": "NYG",
+        "pos": "DB",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Andy Borregales",
+        "team": "NE",
+        "pos": "K",
+        "weeks": {
+          "1": 6.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Anfernee Jennings",
+        "team": "NO",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Anthony Campbell",
+        "team": "GB",
+        "pos": "DT",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Anthony Gould",
+        "team": "IND",
+        "pos": "WR",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Anthony Hill Jr.",
+        "team": "TEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 11.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Anthony Nelson",
+        "team": "TB",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Antoine Winfield Jr.",
+        "team": "TB",
+        "pos": "SAF",
+        "weeks": {
+          "1": 8.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Antonio Johnson",
+        "team": "JAX",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Antonio Williams",
+        "team": "WAS",
+        "pos": "WR",
+        "weeks": {
+          "1": 14.4,
+          "2": 3.9
+        }
+      },
+      {
+        "name": "Ar'Darius Washington",
+        "team": "NYG",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Arden Key",
+        "team": "IND",
+        "pos": "DE",
+        "weeks": {
+          "1": 7.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Arian Smith",
+        "team": "NYJ",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Arik Armstead",
+        "team": "JAX",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Arnold Ebiketie",
+        "team": "PHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Arvell Reese",
+        "team": "NYG",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Asante Samuel Jr.",
+        "team": "PIT",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Ashton Dulin",
+        "team": "IND",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Ashton Gillotte",
+        "team": "KC",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Ashton Jeanty",
+        "team": "LV",
+        "pos": "RB",
+        "weeks": {
+          "1": 35.45,
+          "2": 14.55
+        }
+      },
+      {
+        "name": "Ashtyn Davis",
+        "team": "SF",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Austin Booker",
+        "team": "CHI",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Austin Hooper",
+        "team": "ATL",
+        "pos": "TE",
+        "weeks": {
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Avery Smith",
+        "team": "SEA",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Avieon Terrell",
+        "team": "ATL",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Avonte Maddox",
+        "team": "DET",
+        "pos": "FS",
+        "weeks": {
+          "1": 7.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Azareye'h Thomas",
+        "team": "NYJ",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Azeez Al-Shaair",
+        "team": "HOU",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.5,
+          "2": 9.0
+        }
+      },
+      {
+        "name": "B.J. Hill",
+        "team": "CIN",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Baker Mayfield",
+        "team": "TB",
+        "pos": "QB",
+        "weeks": {
+          "1": 12.89,
+          "2": 14.18
+        }
+      },
+      {
+        "name": "Bam Knight",
+        "team": "ARI",
+        "pos": "RB",
+        "weeks": {
+          "2": 2.9
+        }
+      },
+      {
+        "name": "Barion Brown",
+        "team": "NO",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.55,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Baron Browning",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Barrett Carter",
+        "team": "CIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 9.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Barryn Sorrell",
+        "team": "GB",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Basil Okoye",
+        "team": "NYG",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Bauer Sharp",
+        "team": "TB",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Ben Sinnott",
+        "team": "WAS",
+        "pos": "TE",
+        "weeks": {
+          "2": 1.1
+        }
+      },
+      {
+        "name": "Ben Skowronek",
+        "team": "PIT",
+        "pos": "WR",
+        "weeks": {
+          "2": 0.7
+        }
+      },
+      {
+        "name": "Ben VanSumeren",
+        "team": "KC",
+        "pos": "RB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Benjamin Morrison",
+        "team": "TB",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Benjamin St-Juste",
+        "team": "GB",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Bhayshul Tuten",
+        "team": "JAX",
+        "pos": "RB",
+        "weeks": {
+          "1": 13.05,
+          "2": 16.45
+        }
+      },
+      {
+        "name": "Bijan Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "weeks": {
+          "1": 32.55,
+          "2": 13.6
+        }
+      },
+      {
+        "name": "Blake Cashman",
+        "team": "MIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.0,
+          "2": 10.0
+        }
+      },
+      {
+        "name": "Blake Corum",
+        "team": "LA",
+        "pos": "RB",
+        "weeks": {
+          "1": 7.9,
+          "2": 12.7
+        }
+      },
+      {
+        "name": "Blake Whiteheart",
+        "team": "CLE",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.9,
+          "2": 8.2
+        }
+      },
+      {
+        "name": "Bo Melton",
+        "team": "GB",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Bo Nix",
+        "team": "DEN",
+        "pos": "QB",
+        "weeks": {
+          "1": 7.19,
+          "2": 16.37
+        }
+      },
+      {
+        "name": "Bo Richter",
+        "team": "MIN",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Bobby Brown III",
+        "team": "CAR",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Bobby Okereke",
+        "team": "CAR",
+        "pos": "ILB",
+        "weeks": {
+          "1": 6.5,
+          "2": 11.5
+        }
+      },
+      {
+        "name": "Boye Mafe",
+        "team": "CIN",
+        "pos": "DE",
+        "weeks": {
+          "1": 7.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Braden Fiske",
+        "team": "LA",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Bradley Chubb",
+        "team": "BUF",
+        "pos": "OLB",
+        "weeks": {
+          "1": 2.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Brady Russell",
+        "team": "SEA",
+        "pos": "RB",
+        "weeks": {
+          "1": 3.5
+        }
+      },
+      {
+        "name": "Braelon Allen",
+        "team": "NYJ",
+        "pos": "RB",
+        "weeks": {
+          "1": 6.5,
+          "2": 9.25
+        }
+      },
+      {
+        "name": "Braiden McGregor",
+        "team": "NYJ",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Bralen Trice",
+        "team": "ATL",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Brandon Aubrey",
+        "team": "DAL",
+        "pos": "K",
+        "weeks": {
+          "1": 0.0,
+          "2": 16.0
+        }
+      },
+      {
+        "name": "Brandon Cisse",
+        "team": "GB",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Brandon Dorlus",
+        "team": "ATL",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Brandon Jones",
+        "team": "DEN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 7.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Brandon Stephens",
+        "team": "NYJ",
+        "pos": "CB",
+        "weeks": {
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Branson Combs",
+        "team": "JAX",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Brashard Smith",
+        "team": "KC",
+        "pos": "RB",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Braxton Berrios",
+        "team": "NYG",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Brayden Willis",
+        "team": "SF",
+        "pos": "TE",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Breece Hall",
+        "team": "NYJ",
+        "pos": "RB",
+        "weeks": {
+          "1": 24.3,
+          "2": 15.7
+        }
+      },
+      {
+        "name": "Brenen Thompson",
+        "team": "LAC",
+        "pos": "WR",
+        "weeks": {
+          "2": 1.8
+        }
+      },
+      {
+        "name": "Brenton Cox Jr.",
+        "team": "GB",
+        "pos": "DE",
+        "weeks": {
+          "1": 4.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Brenton Strange",
+        "team": "JAX",
+        "pos": "TE",
+        "weeks": {
+          "1": 9.3,
+          "2": 2.7
+        }
+      },
+      {
+        "name": "Brevyn Spann-Ford",
+        "team": "DAL",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.9,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Brian Burns",
+        "team": "NYG",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Brian Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "weeks": {
+          "1": 5.35,
+          "2": 10.45
+        }
+      },
+      {
+        "name": "Brian Thomas Jr.",
+        "team": "JAX",
+        "pos": "WR",
+        "weeks": {
+          "1": 5.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Britain Covey",
+        "team": "PHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "British Brooks",
+        "team": "HOU",
+        "pos": "RB",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Brock Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "weeks": {
+          "1": 23.35,
+          "2": 29.23
+        }
+      },
+      {
+        "name": "Brock Wright",
+        "team": "DET",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Broderick Washington",
+        "team": "BAL",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Bryan Cook",
+        "team": "CIN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 9.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Bryce Boettcher",
+        "team": "IND",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Bryce Lance",
+        "team": "NO",
+        "pos": "WR",
+        "weeks": {
+          "1": 5.7,
+          "2": 1.3
+        }
+      },
+      {
+        "name": "Bryce Young",
+        "team": "CAR",
+        "pos": "QB",
+        "weeks": {
+          "1": 32.94,
+          "2": 24.33
+        }
+      },
+      {
+        "name": "Brycen Tremayne",
+        "team": "CAR",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Bucky Irving",
+        "team": "TB",
+        "pos": "RB",
+        "weeks": {
+          "1": 18.8,
+          "2": 15.25
+        }
+      },
+      {
+        "name": "Bud Dupree",
+        "team": "LAC",
+        "pos": "OLB",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Budda Baker",
+        "team": "ARI",
+        "pos": "S",
+        "weeks": {
+          "1": 5.5,
+          "2": 12.0
+        }
+      },
+      {
+        "name": "Byron Murphy",
+        "team": "MIN",
+        "pos": "CB",
+        "weeks": {
+          "1": 8.5,
+          "2": 10.5
+        }
+      },
+      {
+        "name": "Byron Murphy II",
+        "team": "SEA",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Byron Young",
+        "team": "LA",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "C.J. Gardner-Johnson",
+        "team": "BUF",
+        "pos": "SAF",
+        "weeks": {
+          "1": 7.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "C.J. Henderson",
+        "team": "ATL",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "C.J. Stroud",
+        "team": "HOU",
+        "pos": "QB",
+        "weeks": {
+          "1": 16.96,
+          "2": 17.77
+        }
+      },
+      {
+        "name": "C.J. West",
+        "team": "SF",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "CJ Allen",
+        "team": "IND",
+        "pos": "LB",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "CJ Donaldson",
+        "team": "NO",
+        "pos": "RB",
+        "weeks": {
+          "1": 1.2,
+          "2": 0.95
+        }
+      },
+      {
+        "name": "Cade Otton",
+        "team": "TB",
+        "pos": "TE",
+        "weeks": {
+          "1": 4.1,
+          "2": 6.3
+        }
+      },
+      {
+        "name": "Cade Stover",
+        "team": "HOU",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.3
+        }
+      },
+      {
+        "name": "Caden Curry",
+        "team": "IND",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Cairo Santos",
+        "team": "CHI",
+        "pos": "K",
+        "weeks": {
+          "1": 12.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Calais Campbell",
+        "team": "BAL",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Caleb Banks",
+        "team": "MIN",
+        "pos": "DT",
+        "weeks": {
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Caleb Douglas",
+        "team": "MIA",
+        "pos": "WR",
+        "weeks": {
+          "1": 12.9,
+          "2": 2.9
+        }
+      },
+      {
+        "name": "Caleb Downs",
+        "team": "DAL",
+        "pos": "SAF",
+        "weeks": {
+          "1": 10.0,
+          "2": 10.5
+        }
+      },
+      {
+        "name": "Caleb Ransaw",
+        "team": "JAX",
+        "pos": "SAF",
+        "weeks": {
+          "1": 5.5
+        }
+      },
+      {
+        "name": "Caleb Williams",
+        "team": "CHI",
+        "pos": "QB",
+        "weeks": {
+          "1": 39.76,
+          "2": 9.97
+        }
+      },
+      {
+        "name": "Calen Bullock",
+        "team": "HOU",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.5
+        }
+      },
+      {
+        "name": "Calijah Kancey",
+        "team": "TB",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Calvin Ridley",
+        "team": "TEN",
+        "pos": "WR",
+        "weeks": {
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Cam Hart",
+        "team": "LAC",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.5,
+          "2": 8.5
+        }
+      },
+      {
+        "name": "Cam Jackson",
+        "team": "CAR",
+        "pos": "DT",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Cam Lewis",
+        "team": "CHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Cam Little",
+        "team": "JAX",
+        "pos": "K",
+        "weeks": {
+          "1": 12.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Cam Skattebo",
+        "team": "NYG",
+        "pos": "RB",
+        "weeks": {
+          "1": 18.6,
+          "2": 10.5
+        }
+      },
+      {
+        "name": "Cam Taylor-Britt",
+        "team": "IND",
+        "pos": "CB",
+        "weeks": {
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Cam Ward",
+        "team": "TEN",
+        "pos": "QB",
+        "weeks": {
+          "1": 12.7,
+          "2": 21.02
+        }
+      },
+      {
+        "name": "Cameron Dicker",
+        "team": "LAC",
+        "pos": "K",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Cameron Heyward",
+        "team": "PIT",
+        "pos": "DE",
+        "weeks": {
+          "1": 5.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Cameron Jordan",
+        "team": "NO",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Cameron Latu",
+        "team": "NE",
+        "pos": "TE",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Cameron Thomas",
+        "team": "ATL",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Camryn Bynum",
+        "team": "IND",
+        "pos": "SAF",
+        "weeks": {
+          "1": 7.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Carl Granderson",
+        "team": "NO",
+        "pos": "DE",
+        "weeks": {
+          "1": 4.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Carl Jones",
+        "team": "BAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Carlton Davis III",
+        "team": "NE",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.5
+        }
+      },
+      {
+        "name": "Carnell Tate",
+        "team": "TEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 5.8,
+          "2": 4.2
+        }
+      },
+      {
+        "name": "Carsen Ryan",
+        "team": "CLE",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Carson Bruener",
+        "team": "PIT",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Carson Schwesinger",
+        "team": "CLE",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.5,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Carson Wentz",
+        "team": "MIN",
+        "pos": "QB",
+        "weeks": {
+          "1": 20.47,
+          "2": 7.07
+        }
+      },
+      {
+        "name": "Cashius Howell",
+        "team": "CIN",
+        "pos": "DE",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Cedric Gray",
+        "team": "TEN",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Cedric Johnson",
+        "team": "CIN",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "CeeDee Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 13.15,
+          "2": 31.3
+        }
+      },
+      {
+        "name": "Chad Ryland",
+        "team": "ARI",
+        "pos": "K",
+        "weeks": {
+          "1": 16.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Chandler Rivers",
+        "team": "BAL",
+        "pos": "CB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Charles Omenihu",
+        "team": "WAS",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Charles Woods",
+        "team": "NE",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 10.0
+        }
+      },
+      {
+        "name": "Charlie Kolar",
+        "team": "LAC",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.0,
+          "2": 3.6
+        }
+      },
+      {
+        "name": "Charlie Woerner",
+        "team": "ATL",
+        "pos": "TE",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Charvarius Ward",
+        "team": "IND",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Chase Brown",
+        "team": "CIN",
+        "pos": "RB",
+        "weeks": {
+          "1": 20.3,
+          "2": 14.7
+        }
+      },
+      {
+        "name": "Chase McLaughlin",
+        "team": "TB",
+        "pos": "K",
+        "weeks": {
+          "1": 11.0,
+          "2": 16.0
+        }
+      },
+      {
+        "name": "Chase Young",
+        "team": "NO",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Chau Smith-Wade",
+        "team": "CAR",
+        "pos": "CB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Chauncey Golston",
+        "team": "NYG",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Chaz Chambliss",
+        "team": "MIN",
+        "pos": "LB",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Chazz Surratt",
+        "team": "SEA",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Chig Okonkwo",
+        "team": "WAS",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.6
+        }
+      },
+      {
+        "name": "Chimere Dike",
+        "team": "TEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.2,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Chop Robinson",
+        "team": "MIA",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Chris Bell",
+        "team": "MIA",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Chris Blair",
+        "team": "ATL",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.1
+        }
+      },
+      {
+        "name": "Chris Boswell",
+        "team": "PIT",
+        "pos": "K",
+        "weeks": {
+          "1": 9.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Chris Brooks",
+        "team": "GB",
+        "pos": "RB",
+        "weeks": {
+          "1": 4.65,
+          "2": 4.1
+        }
+      },
+      {
+        "name": "Chris Godwin Jr.",
+        "team": "TB",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.55,
+          "2": 7.55
+        }
+      },
+      {
+        "name": "Chris Johnson",
+        "team": "MIA",
+        "pos": "CB",
+        "weeks": {
+          "1": 10.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Chris Jones",
+        "team": "KC",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Chris McClellan",
+        "team": "GB",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Chris Moore",
+        "team": "BAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.8,
+          "2": 1.1
+        }
+      },
+      {
+        "name": "Chris Olave",
+        "team": "NO",
+        "pos": "WR",
+        "weeks": {
+          "1": 23.2,
+          "2": 18.6
+        }
+      },
+      {
+        "name": "Chris Rodriguez Jr.",
+        "team": "JAX",
+        "pos": "RB",
+        "weeks": {
+          "1": 3.8,
+          "2": 2.8
+        }
+      },
+      {
+        "name": "Chris Rumph II",
+        "team": "NO",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Christen Miller",
+        "team": "NO",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Christian Barmore",
+        "team": "NE",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Christian Benford",
+        "team": "BUF",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0,
+          "2": 8.5
+        }
+      },
+      {
+        "name": "Christian Elliss",
+        "team": "NE",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.5,
+          "2": 12.5
+        }
+      },
+      {
+        "name": "Christian Gonzalez",
+        "team": "NE",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Christian Harris",
+        "team": "ATL",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Christian Izien",
+        "team": "DET",
+        "pos": "SAF",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Christian McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "weeks": {
+          "1": 13.8,
+          "2": 23.1
+        }
+      },
+      {
+        "name": "Christian Roland-Wallace",
+        "team": "KC",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Christian Watson",
+        "team": "GB",
+        "pos": "WR",
+        "weeks": {
+          "1": 29.7,
+          "2": 12.1
+        }
+      },
+      {
+        "name": "Chuba Hubbard",
+        "team": "CAR",
+        "pos": "RB",
+        "weeks": {
+          "1": 24.7,
+          "2": 16.4
+        }
+      },
+      {
+        "name": "Chuck Clark",
+        "team": "DET",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.5,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Claudin Cherelus",
+        "team": "CAR",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Clelin Ferrell",
+        "team": "MIA",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Cobie Durant",
+        "team": "DAL",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Cody Barton",
+        "team": "TEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Cody Simon",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Cody White",
+        "team": "LV",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.0,
+          "2": 15.4
+        }
+      },
+      {
+        "name": "Colbie Young",
+        "team": "CIN",
+        "pos": "WR",
+        "weeks": {
+          "2": 1.2
+        }
+      },
+      {
+        "name": "Colby Parkinson",
+        "team": "LA",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.1,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Colby Wooden",
+        "team": "NO",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Cole Bishop",
+        "team": "BUF",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Cole Christiansen",
+        "team": "KC",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Cole Holcomb",
+        "team": "PIT",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Cole Kmet",
+        "team": "CHI",
+        "pos": "TE",
+        "weeks": {
+          "1": 10.5,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Colson Yankoff",
+        "team": "WAS",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.4
+        }
+      },
+      {
+        "name": "Colston Loveland",
+        "team": "CHI",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.8
+        }
+      },
+      {
+        "name": "Colton Hood",
+        "team": "NYG",
+        "pos": "CB",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Connor Heyward",
+        "team": "LV",
+        "pos": "FB",
+        "weeks": {
+          "1": 0.35,
+          "2": 0.35
+        }
+      },
+      {
+        "name": "Connor O'Toole",
+        "team": "SEA",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Cooper DeJean",
+        "team": "PHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Cooper Kupp",
+        "team": "SEA",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Cooper McDonald",
+        "team": "KC",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Cooper Rush",
+        "team": "ATL",
+        "pos": "QB",
+        "weeks": {
+          "1": 7.72,
+          "2": 1.94
+        }
+      },
+      {
+        "name": "Cordale Flott",
+        "team": "TEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0
+        }
+      },
+      {
+        "name": "Corey Kiner",
+        "team": "NE",
+        "pos": "RB",
+        "weeks": {
+          "1": 2.6,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Cory Durden",
+        "team": "NE",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Courtland Sutton",
+        "team": "DEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.1,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Craig Woodson",
+        "team": "NE",
+        "pos": "SAF",
+        "weeks": {
+          "1": 5.0,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Curtis Robinson",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Cyrus Allen",
+        "team": "KC",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "D'Andre Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "weeks": {
+          "1": 36.4,
+          "2": 14.4
+        }
+      },
+      {
+        "name": "D'Marco Jackson",
+        "team": "CHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "D.J. Ivey",
+        "team": "CIN",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "D.J. Jones",
+        "team": "DEN",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "D.J. Reed",
+        "team": "DET",
+        "pos": "CB",
+        "weeks": {
+          "1": 9.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "D.J. Wonnum",
+        "team": "DET",
+        "pos": "DE",
+        "weeks": {
+          "1": 5.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "DJ Herman",
+        "team": "MIA",
+        "pos": "RB",
+        "weeks": {
+          "2": 2.3
+        }
+      },
+      {
+        "name": "DJ Moore",
+        "team": "BUF",
+        "pos": "WR",
+        "weeks": {
+          "1": 18.5,
+          "2": 0.15
+        }
+      },
+      {
+        "name": "DJ Reader",
+        "team": "NYG",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "DJ Turner II",
+        "team": "CIN",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.5,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "DK Metcalf",
+        "team": "PIT",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.0,
+          "2": 4.7
+        }
+      },
+      {
+        "name": "DaQuan Jones",
+        "team": "NE",
+        "pos": "DE",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "DaRon Bland",
+        "team": "DAL",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "DaVon Hamilton",
+        "team": "JAX",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Daiyan Henley",
+        "team": "LAC",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Dak Prescott",
+        "team": "DAL",
+        "pos": "QB",
+        "weeks": {
+          "1": 15.9,
+          "2": 30.76
+        }
+      },
+      {
+        "name": "Dallas Goedert",
+        "team": "PHI",
+        "pos": "TE",
+        "weeks": {
+          "1": 21.7,
+          "2": 0.9
+        }
+      },
+      {
+        "name": "Dallas Turner",
+        "team": "MIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Dalton Kincaid",
+        "team": "BUF",
+        "pos": "TE",
+        "weeks": {
+          "1": 15.5,
+          "2": 19.0
+        }
+      },
+      {
+        "name": "Dalton Schultz",
+        "team": "HOU",
+        "pos": "TE",
+        "weeks": {
+          "1": 5.5,
+          "2": 20.0
+        }
+      },
+      {
+        "name": "Dalvin Tomlinson",
+        "team": "LAC",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Damar Hamlin",
+        "team": "BUF",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Dane Belton",
+        "team": "NYJ",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Dani Dennis-Sutton",
+        "team": "GB",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Daniel Bellinger",
+        "team": "TEN",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.2,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Daniel Carlson",
+        "team": "NO",
+        "pos": "K",
+        "weeks": {
+          "1": 6.0,
+          "2": 13.0
+        }
+      },
+      {
+        "name": "Daniel Hardy",
+        "team": "CHI",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Daniel Jones",
+        "team": "IND",
+        "pos": "QB",
+        "weeks": {
+          "1": 10.29,
+          "2": 13.15
+        }
+      },
+      {
+        "name": "Danielle Hunter",
+        "team": "HOU",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Danny Striggow",
+        "team": "JAX",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Danny Stutsman",
+        "team": "NO",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Dante Stills",
+        "team": "ARI",
+        "pos": "DT",
+        "weeks": {
+          "1": 4.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Dante Trader Jr.",
+        "team": "MIA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Dareke Young",
+        "team": "LV",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 3.2
+        }
+      },
+      {
+        "name": "Darien Porter",
+        "team": "LV",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0
+        }
+      },
+      {
+        "name": "Darius Cooper",
+        "team": "PHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.5,
+          "2": 10.6
+        }
+      },
+      {
+        "name": "Darius Muasau",
+        "team": "NE",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Darius Robinson",
+        "team": "ARI",
+        "pos": "DL",
+        "weeks": {
+          "1": 0.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Darnell Mooney",
+        "team": "NYG",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.7,
+          "2": 5.8
+        }
+      },
+      {
+        "name": "Darnell Washington",
+        "team": "PIT",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.8,
+          "2": 1.2
+        }
+      },
+      {
+        "name": "Daron Payne",
+        "team": "WAS",
+        "pos": "NT",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Darrell Jackson Jr.",
+        "team": "NYJ",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Darren Waller",
+        "team": "CAR",
+        "pos": "TE",
+        "weeks": {
+          "1": 3.8,
+          "2": 16.8
+        }
+      },
+      {
+        "name": "Davante Adams",
+        "team": "LA",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.1,
+          "2": 36.5
+        }
+      },
+      {
+        "name": "David Bailey",
+        "team": "NYJ",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.0,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "David Montgomery",
+        "team": "HOU",
+        "pos": "RB",
+        "weeks": {
+          "1": 32.4,
+          "2": 4.9
+        }
+      },
+      {
+        "name": "David Njoku",
+        "team": "LAC",
+        "pos": "TE",
+        "weeks": {
+          "1": 8.3,
+          "2": 1.4
+        }
+      },
+      {
+        "name": "David Onyemata",
+        "team": "NYJ",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "David Walker",
+        "team": "TB",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Davis Allen",
+        "team": "LA",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.8,
+          "2": 1.2
+        }
+      },
+      {
+        "name": "Davison Igbinosun",
+        "team": "BUF",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Davon Godchaux",
+        "team": "NO",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Dawson Knox",
+        "team": "BUF",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.2,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Daxton Hill",
+        "team": "CIN",
+        "pos": "DB",
+        "weeks": {
+          "1": 7.0,
+          "2": 11.0
+        }
+      },
+      {
+        "name": "Daylen Everette",
+        "team": "PIT",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Dayo Odeyingbo",
+        "team": "CHI",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "De'Von Achane",
+        "team": "MIA",
+        "pos": "RB",
+        "weeks": {
+          "1": 11.35,
+          "2": 15.8
+        }
+      },
+      {
+        "name": "DeForest Buckner",
+        "team": "IND",
+        "pos": "DT",
+        "weeks": {
+          "1": 4.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "DeMarcco Hellams",
+        "team": "ATL",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "DeMarcus Lawrence",
+        "team": "SEA",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "DeMario Douglas",
+        "team": "NE",
+        "pos": "WR",
+        "weeks": {
+          "1": 5.5,
+          "2": 1.4
+        }
+      },
+      {
+        "name": "DeMarvion Overshown",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.0
+        }
+      },
+      {
+        "name": "DeVonta Smith",
+        "team": "PHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.8,
+          "2": 23.7
+        }
+      },
+      {
+        "name": "DeWayne Carter",
+        "team": "BUF",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Decamerion Richardson",
+        "team": "NO",
+        "pos": "CB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Dee Alford",
+        "team": "BUF",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Dee Winters",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.0,
+          "2": 10.0
+        }
+      },
+      {
+        "name": "DeeJay Dallas",
+        "team": "MIN",
+        "pos": "RB",
+        "weeks": {
+          "1": 1.6,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Deebo Samuel Sr.",
+        "team": "SF",
+        "pos": "WR",
+        "weeks": {
+          "1": 15.25,
+          "2": 5.25
+        }
+      },
+      {
+        "name": "Deion Burks",
+        "team": "IND",
+        "pos": "WR",
+        "weeks": {
+          "2": 2.4
+        }
+      },
+      {
+        "name": "Del'Shawn Phillips",
+        "team": "LAC",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Dell Pettus",
+        "team": "NE",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Demarcus Robinson",
+        "team": "SF",
+        "pos": "WR",
+        "weeks": {
+          "1": 12.0,
+          "2": 4.9
+        }
+      },
+      {
+        "name": "Demario Davis",
+        "team": "NYJ",
+        "pos": "OLB",
+        "weeks": {
+          "1": 7.0,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Demetrius Knight Jr.",
+        "team": "CIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 8.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Demond Claiborne",
+        "team": "MIN",
+        "pos": "RB",
+        "weeks": {
+          "2": 0.7
+        }
+      },
+      {
+        "name": "Dennis Gardeck",
+        "team": "JAX",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Denzel Boston",
+        "team": "CLE",
+        "pos": "WR",
+        "weeks": {
+          "1": 12.9,
+          "2": 18.0
+        }
+      },
+      {
+        "name": "Denzel Burke",
+        "team": "ARI",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Denzel Ward",
+        "team": "CLE",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.0,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Deommodore Lenoir",
+        "team": "SF",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Deone Walker",
+        "team": "BUF",
+        "pos": "DT",
+        "weeks": {
+          "1": 6.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Deonte Banks",
+        "team": "NYG",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.0
+        }
+      },
+      {
+        "name": "Derek Barnett",
+        "team": "CLE",
+        "pos": "DE",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Derek Stingley Jr.",
+        "team": "HOU",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Derick Hall",
+        "team": "SEA",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Derius Davis",
+        "team": "LAC",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Derrick Barnes",
+        "team": "DET",
+        "pos": "LB",
+        "weeks": {
+          "1": 11.5,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Derrick Brown",
+        "team": "CAR",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Derrick Harmon",
+        "team": "PIT",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Derrick Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "weeks": {
+          "1": 40.8,
+          "2": 20.2
+        }
+      },
+      {
+        "name": "Derwin James",
+        "team": "LAC",
+        "pos": "FS",
+        "weeks": {
+          "1": 9.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Deshaun Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "weeks": {
+          "1": 16.5,
+          "2": 21.47
+        }
+      },
+      {
+        "name": "Desjuan Johnson",
+        "team": "LA",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Devaughn Vele",
+        "team": "NO",
+        "pos": "WR",
+        "weeks": {
+          "1": 16.4,
+          "2": 8.9
+        }
+      },
+      {
+        "name": "Devin Bush",
+        "team": "CHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Devin Duvernay",
+        "team": "ARI",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Devin Lloyd",
+        "team": "CAR",
+        "pos": "LB",
+        "weeks": {
+          "1": 10.0,
+          "2": 23.0
+        }
+      },
+      {
+        "name": "Devin Singletary",
+        "team": "NYG",
+        "pos": "RB",
+        "weeks": {
+          "1": 13.3,
+          "2": 1.65
+        }
+      },
+      {
+        "name": "Devin White",
+        "team": "DET",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Devon Key",
+        "team": "DEN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Devon Witherspoon",
+        "team": "SEA",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.5,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Devonte Wyatt",
+        "team": "GB",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Devontez Walker",
+        "team": "BAL",
+        "pos": "WR",
+        "weeks": {
+          "2": 5.2
+        }
+      },
+      {
+        "name": "Dexter Lawrence",
+        "team": "CIN",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Dillon Thieneman",
+        "team": "CHI",
+        "pos": "SAF",
+        "weeks": {
+          "1": 10.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Divine Deablo",
+        "team": "ATL",
+        "pos": "LB",
+        "weeks": {
+          "1": 7.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Dohnte Meyers",
+        "team": "CIN",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.55,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Dominic Zvada",
+        "team": "NYG",
+        "pos": "K",
+        "weeks": {
+          "1": 4.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Dominique Robinson",
+        "team": "HOU",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Domonique Orange",
+        "team": "MIN",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Dondrea Tillman",
+        "team": "DEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Donovan Ezeiruaku",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 10.0,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Donovan McMillon",
+        "team": "CLE",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Dontayvion Wicks",
+        "team": "PHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 14.3,
+          "2": 9.9
+        }
+      },
+      {
+        "name": "Donte Jackson",
+        "team": "LAC",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Dorance Armstrong",
+        "team": "WAS",
+        "pos": "DE",
+        "weeks": {
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Dorian Williams",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.5,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Drake London",
+        "team": "ATL",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.75,
+          "2": 8.65
+        }
+      },
+      {
+        "name": "Drake Maye",
+        "team": "NE",
+        "pos": "QB",
+        "weeks": {
+          "1": 14.57,
+          "2": 10.02
+        }
+      },
+      {
+        "name": "Drake Thomas",
+        "team": "SEA",
+        "pos": "LB",
+        "weeks": {
+          "1": 8.0,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Dre Greenlaw",
+        "team": "SF",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.5,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Dre'Mont Jones",
+        "team": "NE",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Drew Lock",
+        "team": "SEA",
+        "pos": "QB",
+        "weeks": {
+          "1": 13.28,
+          "2": 21.4
+        }
+      },
+      {
+        "name": "Drew Sample",
+        "team": "CIN",
+        "pos": "TE",
+        "weeks": {
+          "1": 3.4
+        }
+      },
+      {
+        "name": "Drew Stevens",
+        "team": "WAS",
+        "pos": "K",
+        "weeks": {
+          "1": 6.0,
+          "2": 9.0
+        }
+      },
+      {
+        "name": "Drue Tranquill",
+        "team": "KC",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Durham Smythe",
+        "team": "BAL",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.9,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Dyami Brown",
+        "team": "WAS",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 2.1
+        }
+      },
+      {
+        "name": "Dylan Laube",
+        "team": "LV",
+        "pos": "RB",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Dylan Sampson",
+        "team": "CLE",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Easton Mascarenas-Arnold",
+        "team": "CLE",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Ed Oliver",
+        "team": "BUF",
+        "pos": "DT",
+        "weeks": {
+          "1": 5.5
+        }
+      },
+      {
+        "name": "Eddy Pineiro",
+        "team": "SF",
+        "pos": "K",
+        "weeks": {
+          "1": 11.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Edgerrin Cooper",
+        "team": "GB",
+        "pos": "LB",
+        "weeks": {
+          "1": 7.5,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Efton Chism III",
+        "team": "NE",
+        "pos": "WR",
+        "weeks": {
+          "2": 1.3
+        }
+      },
+      {
+        "name": "Eku Leota",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Eli Heidenreich",
+        "team": "PIT",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Eli Raridon",
+        "team": "NE",
+        "pos": "TE",
+        "weeks": {
+          "1": 6.7,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Elic Ayomanor",
+        "team": "TEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 7.6,
+          "2": 7.9
+        }
+      },
+      {
+        "name": "Elijah Arroyo",
+        "team": "SEA",
+        "pos": "TE",
+        "weeks": {
+          "2": 2.2
+        }
+      },
+      {
+        "name": "Elijah Campbell",
+        "team": "NYG",
+        "pos": "DB",
+        "weeks": {
+          "1": 0.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Elijah Hicks",
+        "team": "CHI",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Elijah Higgins",
+        "team": "ARI",
+        "pos": "TE",
+        "weeks": {
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Elijah Molden",
+        "team": "LAC",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0
+        }
+      },
+      {
+        "name": "Elijah Ponder",
+        "team": "NE",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Elijah Roberts",
+        "team": "TB",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Emanuel Wilson",
+        "team": "SEA",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.8,
+          "2": 14.45
+        }
+      },
+      {
+        "name": "Emari Demercado",
+        "team": "DAL",
+        "pos": "RB",
+        "weeks": {
+          "1": 1.2,
+          "2": 1.55
+        }
+      },
+      {
+        "name": "Emeka Egbuka",
+        "team": "TB",
+        "pos": "WR",
+        "weeks": {
+          "1": 8.8,
+          "2": 9.05
+        }
+      },
+      {
+        "name": "Emmanuel Forbes",
+        "team": "LA",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Emmanuel McNeil-Warren",
+        "team": "CLE",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Emmett Johnson",
+        "team": "KC",
+        "pos": "RB",
+        "weeks": {
+          "1": 10.3,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Eric Murray",
+        "team": "JAX",
+        "pos": "S",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Eric O'Neill",
+        "team": "DET",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Eric Saubert",
+        "team": "SEA",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.0,
+          "2": -0.5
+        }
+      },
+      {
+        "name": "Eric Stokes",
+        "team": "LV",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Eric Wilson",
+        "team": "MIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Erick All",
+        "team": "CIN",
+        "pos": "TE",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Erick Hallett",
+        "team": "TEN",
+        "pos": "SAF",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Erick Hunter",
+        "team": "NE",
+        "pos": "LB",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Ernest Jones",
+        "team": "SEA",
+        "pos": "LB",
+        "weeks": {
+          "1": 10.5,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Ethan Burke",
+        "team": "BAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Evan Engram",
+        "team": "DEN",
+        "pos": "TE",
+        "weeks": {
+          "1": 12.3,
+          "2": 2.2
+        }
+      },
+      {
+        "name": "Evan McPherson",
+        "team": "CIN",
+        "pos": "K",
+        "weeks": {
+          "1": 20.0,
+          "2": 12.0
+        }
+      },
+      {
+        "name": "Evan Williams",
+        "team": "GB",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.5,
+          "2": 9.5
+        }
+      },
+      {
+        "name": "Eyioma Uwazurike",
+        "team": "DEN",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Fabian Moreau",
+        "team": "WAS",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Feleipe Franks",
+        "team": "CAR",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Felix Anudike-Uzomah",
+        "team": "KC",
+        "pos": "DE",
+        "weeks": {
+          "1": 5.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Foley Fatukasi",
+        "team": "LV",
+        "pos": "DT",
+        "weeks": {
+          "1": 4.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Foster Moreau",
+        "team": "HOU",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.5,
+          "2": 5.4
+        }
+      },
+      {
+        "name": "Foye Oluokun",
+        "team": "JAX",
+        "pos": "LB",
+        "weeks": {
+          "1": 7.5,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Frank Gore Jr.",
+        "team": "BUF",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.55
+        }
+      },
+      {
+        "name": "Frankie Luvu",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5
+        }
+      },
+      {
+        "name": "Fred Warner",
+        "team": "SF",
+        "pos": "MLB",
+        "weeks": {
+          "1": 11.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Gabe Jacas",
+        "team": "NE",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Garret Wallow",
+        "team": "SF",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Garrett Wilson",
+        "team": "NYJ",
+        "pos": "WR",
+        "weeks": {
+          "1": 10.9,
+          "2": 14.2
+        }
+      },
+      {
+        "name": "Genesis Smith",
+        "team": "LAC",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Geno Smith",
+        "team": "NYJ",
+        "pos": "QB",
+        "weeks": {
+          "1": 10.8,
+          "2": 16.83
+        }
+      },
+      {
+        "name": "George Holani",
+        "team": "SEA",
+        "pos": "RB",
+        "weeks": {
+          "1": 4.9,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "George Karlaftis",
+        "team": "KC",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "George Kittle",
+        "team": "SF",
+        "pos": "TE",
+        "weeks": {
+          "1": 3.2,
+          "2": 16.0
+        }
+      },
+      {
+        "name": "George Odum",
+        "team": "HOU",
+        "pos": "DB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "George Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.3,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Germie Bernard",
+        "team": "PIT",
+        "pos": "WR",
+        "weeks": {
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Gervon Dexter Sr.",
+        "team": "ATL",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Gracen Halton",
+        "team": "SF",
+        "pos": "DT",
+        "weeks": {
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Grady Jarrett",
+        "team": "CHI",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Grant Delpit",
+        "team": "CLE",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Greg Dortch",
+        "team": "BUF",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Greg Dulcich",
+        "team": "MIA",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.8,
+          "2": 2.7
+        }
+      },
+      {
+        "name": "Greg Gaines",
+        "team": "BUF",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Greg Newsome II",
+        "team": "NYG",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Greg Rousseau",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "1": 13.0,
+          "2": 9.0
+        }
+      },
+      {
+        "name": "Grover Stewart",
+        "team": "IND",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Gunnar Helm",
+        "team": "TEN",
+        "pos": "TE",
+        "weeks": {
+          "1": 4.8,
+          "2": 2.3
+        }
+      },
+      {
+        "name": "Harold Fannin Jr.",
+        "team": "CLE",
+        "pos": "TE",
+        "weeks": {
+          "1": 3.1,
+          "2": 7.9
+        }
+      },
+      {
+        "name": "Harold Perkins Jr.",
+        "team": "ATL",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Harrison Butker",
+        "team": "KC",
+        "pos": "K",
+        "weeks": {
+          "1": 7.0,
+          "2": 17.5
+        }
+      },
+      {
+        "name": "Harrison Mevis",
+        "team": "LA",
+        "pos": "K",
+        "weeks": {
+          "1": 1.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Harrison Phillips",
+        "team": "NYJ",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Harrison Smith",
+        "team": "MIN",
+        "pos": "FS",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Henry To'oTo'o",
+        "team": "HOU",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Hezekiah Masses",
+        "team": "LV",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 12.5
+        }
+      },
+      {
+        "name": "Hunter Henry",
+        "team": "NE",
+        "pos": "TE",
+        "weeks": {
+          "1": 4.1,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Hunter Long",
+        "team": "ARI",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Hunter Luepke",
+        "team": "DAL",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.95,
+          "2": 1.35
+        }
+      },
+      {
+        "name": "Hunter Wohler",
+        "team": "IND",
+        "pos": "SAF",
+        "weeks": {
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Ian Thomas",
+        "team": "LV",
+        "pos": "TE",
+        "weeks": {
+          "2": 1.6
+        }
+      },
+      {
+        "name": "Isaac TeSlaa",
+        "team": "DET",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 3.6
+        }
+      },
+      {
+        "name": "Isaiah Bond",
+        "team": "CLE",
+        "pos": "WR",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Isaiah Davis",
+        "team": "NYJ",
+        "pos": "RB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Isaiah Likely",
+        "team": "NYG",
+        "pos": "TE",
+        "weeks": {
+          "1": 23.8,
+          "2": 5.8
+        }
+      },
+      {
+        "name": "Isaiah McDuffie",
+        "team": "GB",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Isaiah McGuire",
+        "team": "CLE",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Isaiah Pola-Mao",
+        "team": "LV",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Isaiah Rodgers",
+        "team": "MIN",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Isaiah Simmons",
+        "team": "CAR",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Isaiah Stalbird",
+        "team": "NO",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5
+        }
+      },
+      {
+        "name": "Isaiah Williams",
+        "team": "NYJ",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.2,
+          "2": 8.05
+        }
+      },
+      {
+        "name": "Ivan Pace Jr.",
+        "team": "MIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "J. Michael Sturdivant",
+        "team": "GB",
+        "pos": "WR",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "J.K. Dobbins",
+        "team": "DEN",
+        "pos": "RB",
+        "weeks": {
+          "1": 5.6,
+          "2": 6.1
+        }
+      },
+      {
+        "name": "JL Skinner",
+        "team": "DEN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Ja'Kobi Lane",
+        "team": "BAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.6
+        }
+      },
+      {
+        "name": "Ja'Marr Chase",
+        "team": "CIN",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.2,
+          "2": 23.0
+        }
+      },
+      {
+        "name": "Ja'Quan McMillian",
+        "team": "DEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Jack Bech",
+        "team": "LV",
+        "pos": "WR",
+        "weeks": {
+          "1": 10.8,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jack Campbell",
+        "team": "DET",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Jack Cochrane",
+        "team": "KC",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Jack Gibbens",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "1": 7.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Jack Jones",
+        "team": "SF",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jack Sanborn",
+        "team": "CHI",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Jack Sawyer",
+        "team": "PIT",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5
+        }
+      },
+      {
+        "name": "Jack Strand",
+        "team": "ATL",
+        "pos": "QB",
+        "weeks": {
+          "2": 1.46
+        }
+      },
+      {
+        "name": "Jackson Woodard",
+        "team": "MIA",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Jacob Cowing",
+        "team": "SF",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Jacob Martin",
+        "team": "TEN",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Jacob Parrish",
+        "team": "TB",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0
+        }
+      },
+      {
+        "name": "Jacob Rodriguez",
+        "team": "MIA",
+        "pos": "LB",
+        "weeks": {
+          "1": 9.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Jacob Saylors",
+        "team": "DET",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jacob Thomas",
+        "team": "MIN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jacoby Brissett",
+        "team": "ARI",
+        "pos": "QB",
+        "weeks": {
+          "1": 17.98,
+          "2": 7.75
+        }
+      },
+      {
+        "name": "Jacory Croskey-Merritt",
+        "team": "WAS",
+        "pos": "RB",
+        "weeks": {
+          "1": 16.1,
+          "2": 8.3
+        }
+      },
+      {
+        "name": "Jadarian Price",
+        "team": "SEA",
+        "pos": "RB",
+        "weeks": {
+          "1": 9.3,
+          "2": 7.75
+        }
+      },
+      {
+        "name": "Jaden Dugger",
+        "team": "SF",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Jaden Hicks",
+        "team": "KC",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.0,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Jadeveon Clowney",
+        "team": "HOU",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.0
+        }
+      },
+      {
+        "name": "Jadon Canady",
+        "team": "KC",
+        "pos": "CB",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jaelan Phillips",
+        "team": "CAR",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jahan Dotson",
+        "team": "ATL",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.4,
+          "2": 2.1
+        }
+      },
+      {
+        "name": "Jahdae Barron",
+        "team": "DEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0
+        }
+      },
+      {
+        "name": "Jahdae Walker",
+        "team": "CHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 7.6
+        }
+      },
+      {
+        "name": "Jahlani Tavai",
+        "team": "JAX",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jahmyr Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "weeks": {
+          "1": 38.35,
+          "2": 24.3
+        }
+      },
+      {
+        "name": "Jaishawn Barham",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Jake Bates",
+        "team": "DET",
+        "pos": "K",
+        "weeks": {
+          "1": 7.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Jake Briningstool",
+        "team": "KC",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.4
+        }
+      },
+      {
+        "name": "Jake Elliott",
+        "team": "PHI",
+        "pos": "K",
+        "weeks": {
+          "1": 6.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Jake Ferguson",
+        "team": "DAL",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.6,
+          "2": 18.3
+        }
+      },
+      {
+        "name": "Jake Golday",
+        "team": "MIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jake Hansen",
+        "team": "HOU",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jakobi Meyers",
+        "team": "JAX",
+        "pos": "WR",
+        "weeks": {
+          "1": 11.45,
+          "2": 3.3
+        }
+      },
+      {
+        "name": "Jaleel McLaughlin",
+        "team": "CLE",
+        "pos": "RB",
+        "weeks": {
+          "2": 0.55
+        }
+      },
+      {
+        "name": "Jalen Brooks",
+        "team": "ARI",
+        "pos": "WR",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Jalen Carter",
+        "team": "PHI",
+        "pos": "DT",
+        "weeks": {
+          "1": 6.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Jalen Coker",
+        "team": "CAR",
+        "pos": "WR",
+        "weeks": {
+          "1": 29.8,
+          "2": 10.6
+        }
+      },
+      {
+        "name": "Jalen Davis",
+        "team": "CIN",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jalen Hurts",
+        "team": "PHI",
+        "pos": "QB",
+        "weeks": {
+          "1": 26.47,
+          "2": 19.41
+        }
+      },
+      {
+        "name": "Jalen Nailor",
+        "team": "LV",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.2,
+          "2": 1.4
+        }
+      },
+      {
+        "name": "Jalen Pitre",
+        "team": "HOU",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jalen Ramsey",
+        "team": "PIT",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jalen Redmond",
+        "team": "MIN",
+        "pos": "DL",
+        "weeks": {
+          "1": 3.5,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Jalen Royals",
+        "team": "KC",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.0,
+          "2": 8.6
+        }
+      },
+      {
+        "name": "Jalen Thompson",
+        "team": "DAL",
+        "pos": "DB",
+        "weeks": {
+          "1": 6.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Jalyx Hunt",
+        "team": "PHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Jamal Hill",
+        "team": "HOU",
+        "pos": "LB",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jamaree Caldwell",
+        "team": "LAC",
+        "pos": "DT",
+        "weeks": {
+          "1": 4.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jameis Winston",
+        "team": "NYG",
+        "pos": "QB",
+        "weeks": {
+          "2": 4.04
+        }
+      },
+      {
+        "name": "Jamel Dean",
+        "team": "PIT",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "James Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "weeks": {
+          "1": 11.65,
+          "2": 25.65
+        }
+      },
+      {
+        "name": "James Houston",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "James Lynch",
+        "team": "CHI",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "James Pierre",
+        "team": "MIN",
+        "pos": "CB",
+        "weeks": {
+          "1": 9.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "James Thompson Jr.",
+        "team": "SF",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "James Williams",
+        "team": "TEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Jameson Williams",
+        "team": "DET",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.5,
+          "2": 4.3
+        }
+      },
+      {
+        "name": "Jamien Sherwood",
+        "team": "NYJ",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jaquan Brisker",
+        "team": "PIT",
+        "pos": "SAF",
+        "weeks": {
+          "1": 9.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jared Goff",
+        "team": "DET",
+        "pos": "QB",
+        "weeks": {
+          "1": 16.94,
+          "2": 30.53
+        }
+      },
+      {
+        "name": "Jared Ivey",
+        "team": "ATL",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Jared Verse",
+        "team": "CLE",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jared Wayne",
+        "team": "HOU",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.7,
+          "2": 4.3
+        }
+      },
+      {
+        "name": "Jarran Reed",
+        "team": "SEA",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Jarrian Jones",
+        "team": "JAX",
+        "pos": "CB",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Jarvis Brownlee Jr.",
+        "team": "NYJ",
+        "pos": "DB",
+        "weeks": {
+          "1": 3.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Jason Marshall Jr.",
+        "team": "MIA",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Jason Myers",
+        "team": "SEA",
+        "pos": "K",
+        "weeks": {
+          "1": 7.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Jason Sanders",
+        "team": "NYJ",
+        "pos": "K",
+        "weeks": {
+          "1": 15.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Jauan Jennings",
+        "team": "MIN",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Javon Bullard",
+        "team": "GB",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Javon Hargrave",
+        "team": "GB",
+        "pos": "NT",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Javon Kinlaw",
+        "team": "WAS",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Javon Solomon",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Javontae Jean-Baptiste",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Javonte Williams",
+        "team": "DAL",
+        "pos": "RB",
+        "weeks": {
+          "1": 24.7,
+          "2": 9.5
+        }
+      },
+      {
+        "name": "Jaxon Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "weeks": {
+          "1": 22.2,
+          "2": 38.0
+        }
+      },
+      {
+        "name": "Jaxson Dart",
+        "team": "NYG",
+        "pos": "QB",
+        "weeks": {
+          "1": 29.35,
+          "2": 0.8
+        }
+      },
+      {
+        "name": "Jay Higgins",
+        "team": "BAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jay Ward",
+        "team": "MIN",
+        "pos": "SAF",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jaycee Horn",
+        "team": "CAR",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Jayden Daniels",
+        "team": "WAS",
+        "pos": "QB",
+        "weeks": {
+          "1": 18.91,
+          "2": 16.49
+        }
+      },
+      {
+        "name": "Jayden Price",
+        "team": "NO",
+        "pos": "CB",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Jayden Reed",
+        "team": "GB",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.5,
+          "2": 0.9
+        }
+      },
+      {
+        "name": "Jaylahn Tuimoloau",
+        "team": "IND",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Jaylen McCollough",
+        "team": "LA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jaylen Reed",
+        "team": "NE",
+        "pos": "SAF",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Jaylen Waddle",
+        "team": "DEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.7,
+          "2": 17.8
+        }
+      },
+      {
+        "name": "Jaylen Warren",
+        "team": "PIT",
+        "pos": "RB",
+        "weeks": {
+          "1": 10.3,
+          "2": 11.45
+        }
+      },
+      {
+        "name": "Jaylen Watson",
+        "team": "LA",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Jaylen Wright",
+        "team": "MIA",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.15,
+          "2": 1.6
+        }
+      },
+      {
+        "name": "Jaylin Lane",
+        "team": "WAS",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.9,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Jaylin Noel",
+        "team": "HOU",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.3,
+          "2": 5.15
+        }
+      },
+      {
+        "name": "Jaylin Smith",
+        "team": "HOU",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jaylinn Hawkins",
+        "team": "BAL",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Jaylon Carlies",
+        "team": "IND",
+        "pos": "LB",
+        "weeks": {
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Jaylon Johnson",
+        "team": "CHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Jeffery Simmons",
+        "team": "TEN",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Jeffrey Bassa",
+        "team": "KC",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jeremiah Moon",
+        "team": "CAR",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Jeremiah Trotter Jr.",
+        "team": "PHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Jeremiyah Love",
+        "team": "ARI",
+        "pos": "RB",
+        "weeks": {
+          "1": 14.75,
+          "2": 8.25
+        }
+      },
+      {
+        "name": "Jeremy Chinn",
+        "team": "LV",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Jeremy Reaves",
+        "team": "WAS",
+        "pos": "DB",
+        "weeks": {
+          "1": 4.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Jeremy Ruckert",
+        "team": "NYJ",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.9,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Jermaine Johnson II",
+        "team": "TEN",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Jermod McCoy",
+        "team": "LV",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Jerry Jeudy",
+        "team": "CLE",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.6,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Jerry Tillery",
+        "team": "IND",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Jessie Bates",
+        "team": "ATL",
+        "pos": "FS",
+        "weeks": {
+          "1": 4.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Jevon Holland",
+        "team": "NYG",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.0,
+          "2": 16.5
+        }
+      },
+      {
+        "name": "Ji'Ayir Brown",
+        "team": "SF",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.0,
+          "2": 8.5
+        }
+      },
+      {
+        "name": "Jihaad Campbell",
+        "team": "PHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 9.0,
+          "2": 10.0
+        }
+      },
+      {
+        "name": "Jimmy Horn Jr.",
+        "team": "CAR",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Joe Andreessen",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Joe Burrow",
+        "team": "CIN",
+        "pos": "QB",
+        "weeks": {
+          "1": 16.41,
+          "2": 16.43
+        }
+      },
+      {
+        "name": "Joe Giles-Harris",
+        "team": "CIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Joey Slye",
+        "team": "TEN",
+        "pos": "K",
+        "weeks": {
+          "1": 5.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "John Bates",
+        "team": "WAS",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.3
+        }
+      },
+      {
+        "name": "John Franklin-Myers",
+        "team": "TEN",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "John Jenkins",
+        "team": "BAL",
+        "pos": "DT",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "John Metchie III",
+        "team": "CAR",
+        "pos": "WR",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Johnny Mundt",
+        "team": "PHI",
+        "pos": "TE",
+        "weeks": {
+          "2": 1.8
+        }
+      },
+      {
+        "name": "Jonah Coleman",
+        "team": "DEN",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.0,
+          "2": 15.8
+        }
+      },
+      {
+        "name": "Jonah Elliss",
+        "team": "DEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Jonah Laulu",
+        "team": "LV",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jonas Sanker",
+        "team": "NO",
+        "pos": "SAF",
+        "weeks": {
+          "1": 8.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Jonathan Allen",
+        "team": "CIN",
+        "pos": "DT",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Jonathan Bullard",
+        "team": "DAL",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Jonathan Ford",
+        "team": "GB",
+        "pos": "DT",
+        "weeks": {
+          "1": 4.5
+        }
+      },
+      {
+        "name": "Jonathan Mingo",
+        "team": "DAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Jonathan Owens",
+        "team": "IND",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jonathan Taylor",
+        "team": "IND",
+        "pos": "RB",
+        "weeks": {
+          "1": 28.35,
+          "2": 33.2
+        }
+      },
+      {
+        "name": "Jonathon Brooks",
+        "team": "CAR",
+        "pos": "RB",
+        "weeks": {
+          "1": 7.7,
+          "2": 2.85
+        }
+      },
+      {
+        "name": "Jonnu Smith",
+        "team": "GB",
+        "pos": "TE",
+        "weeks": {
+          "1": 6.0
+        }
+      },
+      {
+        "name": "Jordan Addison",
+        "team": "MIN",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 3.1
+        }
+      },
+      {
+        "name": "Jordan Battle",
+        "team": "CIN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 7.5,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Jordan Burch",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Jordan Davis",
+        "team": "PHI",
+        "pos": "DT",
+        "weeks": {
+          "1": 5.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jordan Elliott",
+        "team": "TEN",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jordan Hancock",
+        "team": "BUF",
+        "pos": "CB",
+        "weeks": {
+          "1": 0.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Jordan Howden",
+        "team": "NO",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Jordan James",
+        "team": "SF",
+        "pos": "RB",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Jordan Love",
+        "team": "GB",
+        "pos": "QB",
+        "weeks": {
+          "1": 21.73,
+          "2": 13.8
+        }
+      },
+      {
+        "name": "Jordan Magee",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Jordan Mason",
+        "team": "MIN",
+        "pos": "RB",
+        "weeks": {
+          "1": 15.65
+        }
+      },
+      {
+        "name": "Jordan Phillips",
+        "team": "MIA",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jordan Turner",
+        "team": "DEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Jordan Whittington",
+        "team": "LA",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.3
+        }
+      },
+      {
+        "name": "Jordan van den Berg",
+        "team": "CHI",
+        "pos": "DT",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Jordyn Brooks",
+        "team": "MIA",
+        "pos": "LB",
+        "weeks": {
+          "1": 7.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Josaiah Stewart",
+        "team": "LA",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Josh Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "weeks": {
+          "1": 37.16,
+          "2": 44.32
+        }
+      },
+      {
+        "name": "Josh Blackwell",
+        "team": "CHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Josh Cameron",
+        "team": "JAX",
+        "pos": "WR",
+        "weeks": {
+          "1": 9.5,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Josh Downs",
+        "team": "IND",
+        "pos": "WR",
+        "weeks": {
+          "1": 5.7,
+          "2": 10.7
+        }
+      },
+      {
+        "name": "Josh Hines-Allen",
+        "team": "JAX",
+        "pos": "DE",
+        "weeks": {
+          "1": 10.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Josh Jobe",
+        "team": "SEA",
+        "pos": "CB",
+        "weeks": {
+          "1": 9.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Josh Metellus",
+        "team": "MIN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.5,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Josh Oliver",
+        "team": "MIN",
+        "pos": "TE",
+        "weeks": {
+          "1": 3.2,
+          "2": 2.9
+        }
+      },
+      {
+        "name": "Josh Palmer",
+        "team": "BUF",
+        "pos": "WR",
+        "weeks": {
+          "1": 9.9,
+          "2": 10.8
+        }
+      },
+      {
+        "name": "Josh Sweat",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Josh Wallace",
+        "team": "LA",
+        "pos": "CB",
+        "weeks": {
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Josh Williams",
+        "team": "TB",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Josh Woods",
+        "team": "ATL",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Joshua Farmer",
+        "team": "NE",
+        "pos": "DT",
+        "weeks": {
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Joshua Uche",
+        "team": "MIA",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Josiah Trotter",
+        "team": "TB",
+        "pos": "LB",
+        "weeks": {
+          "1": 17.5,
+          "2": 9.5
+        }
+      },
+      {
+        "name": "Jourdan Lewis",
+        "team": "JAX",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Jowon Briggs",
+        "team": "NYJ",
+        "pos": "DE",
+        "weeks": {
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Julian Blackmon",
+        "team": "NO",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Julian Love",
+        "team": "SEA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 9.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Julian Neal",
+        "team": "SEA",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Julius Brents",
+        "team": "MIA",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Julius Chestnut",
+        "team": "TEN",
+        "pos": "RB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Julius Wood",
+        "team": "MIA",
+        "pos": "DB",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Justice Hill",
+        "team": "BAL",
+        "pos": "RB",
+        "weeks": {
+          "1": 4.8,
+          "2": 3.3
+        }
+      },
+      {
+        "name": "Justin Eboigbe",
+        "team": "LAC",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Justin Herbert",
+        "team": "LAC",
+        "pos": "QB",
+        "weeks": {
+          "1": 15.51,
+          "2": 11.63
+        }
+      },
+      {
+        "name": "Justin Jefferson",
+        "team": "MIN",
+        "pos": "WR",
+        "weeks": {
+          "1": 27.2,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Justin Reid",
+        "team": "NO",
+        "pos": "S",
+        "weeks": {
+          "1": 6.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Justin Strnad",
+        "team": "DEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Justin Walley",
+        "team": "IND",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Juwan Johnson",
+        "team": "NO",
+        "pos": "TE",
+        "weeks": {
+          "1": 12.9,
+          "2": 8.6
+        }
+      },
+      {
+        "name": "K'Lavon Chaisson",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "KC Concepcion",
+        "team": "CLE",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.55,
+          "2": 5.45
+        }
+      },
+      {
+        "name": "Ka'imi Fairbairn",
+        "team": "HOU",
+        "pos": "K",
+        "weeks": {
+          "1": 9.5,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "KaVontae Turpin",
+        "team": "DAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.3,
+          "2": 0.35
+        }
+      },
+      {
+        "name": "Kaden Davis",
+        "team": "CHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Kaden Elliss",
+        "team": "NO",
+        "pos": "LB",
+        "weeks": {
+          "1": 7.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Kaden Wetjen",
+        "team": "PIT",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Kaelon Black",
+        "team": "SF",
+        "pos": "RB",
+        "weeks": {
+          "1": 11.0,
+          "2": 4.25
+        }
+      },
+      {
+        "name": "Kain Medrano",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Kaleb Elarms-Orr",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kaleb Johnson",
+        "team": "GB",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.0,
+          "2": 5.2
+        }
+      },
+      {
+        "name": "Kalif Raymond",
+        "team": "CHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 12.4,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Kam Curl",
+        "team": "LA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Kamal Hadden",
+        "team": "GB",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kamari Lassiter",
+        "team": "HOU",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Kameron Johnson",
+        "team": "TB",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Kamren Kinchens",
+        "team": "LA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.0
+        }
+      },
+      {
+        "name": "Kapena Gushiken",
+        "team": "IND",
+        "pos": "CB",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Karene Reid",
+        "team": "DEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Karl Brooks",
+        "team": "GB",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Karon Prunty",
+        "team": "NE",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Karson Sharar",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kayshon Boutte",
+        "team": "HOU",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.6,
+          "2": 5.2
+        }
+      },
+      {
+        "name": "Kaytron Allen",
+        "team": "WAS",
+        "pos": "RB",
+        "weeks": {
+          "1": 2.6,
+          "2": 3.65
+        }
+      },
+      {
+        "name": "Kayvon Thibodeaux",
+        "team": "NYG",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Keaton Mitchell",
+        "team": "LAC",
+        "pos": "RB",
+        "weeks": {
+          "1": 1.9,
+          "2": 5.65
+        }
+      },
+      {
+        "name": "Keeanu Benton",
+        "team": "PIT",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Keenan Allen",
+        "team": "IND",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.2,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kei'Trel Clark",
+        "team": "ARI",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Keion White",
+        "team": "SF",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Keionte Scott",
+        "team": "TB",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Keisean Nixon",
+        "team": "GB",
+        "pos": "DB",
+        "weeks": {
+          "1": 9.0,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Keith Abney II",
+        "team": "DET",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Keldric Faulk",
+        "team": "TEN",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Keleki Latu",
+        "team": "BUF",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Kendal Daniels",
+        "team": "ATL",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Kendre Miller",
+        "team": "NO",
+        "pos": "RB",
+        "weeks": {
+          "1": 11.25
+        }
+      },
+      {
+        "name": "Kendrick Bourne",
+        "team": "ARI",
+        "pos": "WR",
+        "weeks": {
+          "1": 11.5,
+          "2": 2.1
+        }
+      },
+      {
+        "name": "Kenneth Harris",
+        "team": "IND",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Kenneth Walker III",
+        "team": "KC",
+        "pos": "RB",
+        "weeks": {
+          "1": 38.35,
+          "2": 26.8
+        }
+      },
+      {
+        "name": "Kenny Clark",
+        "team": "DAL",
+        "pos": "NT",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Kenny Gainwell",
+        "team": "TB",
+        "pos": "RB",
+        "weeks": {
+          "1": 3.55,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Kenny Pickett",
+        "team": "CAR",
+        "pos": "QB",
+        "weeks": {
+          "1": 2.65,
+          "2": -0.15
+        }
+      },
+      {
+        "name": "Kentavius Street",
+        "team": "CHI",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Kenyon Sadiq",
+        "team": "NYJ",
+        "pos": "TE",
+        "weeks": {
+          "1": 10.15,
+          "2": 2.7
+        }
+      },
+      {
+        "name": "Keon Coleman",
+        "team": "BUF",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.6,
+          "2": 9.3
+        }
+      },
+      {
+        "name": "Keondre Jackson",
+        "team": "BAL",
+        "pos": "SAF",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kevin Austin Jr.",
+        "team": "NO",
+        "pos": "WR",
+        "weeks": {
+          "2": 1.2
+        }
+      },
+      {
+        "name": "Kevin Byard",
+        "team": "NE",
+        "pos": "FS",
+        "weeks": {
+          "1": 3.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Kevin Coleman Jr.",
+        "team": "MIA",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Kevin Knowles",
+        "team": "TB",
+        "pos": "DB",
+        "weeks": {
+          "1": 2.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Kevin Winston Jr.",
+        "team": "TEN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 7.0,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Keyon Martin",
+        "team": "BAL",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "KhaDarel Hodge",
+        "team": "SF",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.8
+        }
+      },
+      {
+        "name": "Khalid Kareem",
+        "team": "SF",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Khalil Dorsey",
+        "team": "DET",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Khalil Mack",
+        "team": "LAC",
+        "pos": "OLB",
+        "weeks": {
+          "1": 1.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Khalil Shakir",
+        "team": "BUF",
+        "pos": "WR",
+        "weeks": {
+          "1": 7.0,
+          "2": 5.3
+        }
+      },
+      {
+        "name": "Khyiris Tonga",
+        "team": "KC",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.55
+        }
+      },
+      {
+        "name": "Kimani Vidal",
+        "team": "LAC",
+        "pos": "RB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kingsley Enagbare",
+        "team": "NYJ",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.5,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Kirk Cousins",
+        "team": "LV",
+        "pos": "QB",
+        "weeks": {
+          "1": 17.05,
+          "2": 22.22
+        }
+      },
+      {
+        "name": "Kitan Crawford",
+        "team": "ARI",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.5
+        }
+      },
+      {
+        "name": "Kobie Turner",
+        "team": "LA",
+        "pos": "DE",
+        "weeks": {
+          "1": 4.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Konata Mumpfield",
+        "team": "LA",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.7
+        }
+      },
+      {
+        "name": "Kool-Aid McKinstry",
+        "team": "NO",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Kris Abrams-Draine",
+        "team": "DEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Kris Jenkins",
+        "team": "CIN",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kristian Fulton",
+        "team": "KC",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Kristian Welch",
+        "team": "GB",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Kwity Paye",
+        "team": "LV",
+        "pos": "DE",
+        "weeks": {
+          "1": 7.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kyle Dugger",
+        "team": "CIN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Kyle Hamilton",
+        "team": "BAL",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.0,
+          "2": 10.0
+        }
+      },
+      {
+        "name": "Kyle Juszczyk",
+        "team": "SF",
+        "pos": "FB",
+        "weeks": {
+          "2": 9.7
+        }
+      },
+      {
+        "name": "Kyle Monangai",
+        "team": "CHI",
+        "pos": "RB",
+        "weeks": {
+          "1": 21.9,
+          "2": 9.3
+        }
+      },
+      {
+        "name": "Kyle Pitts",
+        "team": "ATL",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.0,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Kyle Van Noy",
+        "team": "MIN",
+        "pos": "MLB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Kyle Williams",
+        "team": "NE",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Kyler Murray",
+        "team": "MIN",
+        "pos": "QB",
+        "weeks": {
+          "1": 1.12
+        }
+      },
+      {
+        "name": "Kyren Williams",
+        "team": "LA",
+        "pos": "RB",
+        "weeks": {
+          "1": 16.75,
+          "2": 17.7
+        }
+      },
+      {
+        "name": "L'Jarius Sneed",
+        "team": "KC",
+        "pos": "CB",
+        "weeks": {
+          "1": 7.5,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "L.J. Collier",
+        "team": "ARI",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "LT Overton",
+        "team": "DAL",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "LaCale London",
+        "team": "ATL",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "LaJohntay Wester",
+        "team": "BAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.5,
+          "2": 1.9
+        }
+      },
+      {
+        "name": "Ladd McConkey",
+        "team": "LAC",
+        "pos": "WR",
+        "weeks": {
+          "1": 16.7,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Laiatu Latu",
+        "team": "IND",
+        "pos": "DE",
+        "weeks": {
+          "1": 6.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Lamar Jackson",
+        "team": "BAL",
+        "pos": "QB",
+        "weeks": {
+          "1": 26.71,
+          "2": 16.8
+        }
+      },
+      {
+        "name": "Lan Larison",
+        "team": "NE",
+        "pos": "RB",
+        "weeks": {
+          "1": 1.9
+        }
+      },
+      {
+        "name": "Landon Jackson",
+        "team": "BUF",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Laquon Treadwell",
+        "team": "IND",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 8.1
+        }
+      },
+      {
+        "name": "Lathan Ransom",
+        "team": "CAR",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "LeQuint Allen Jr.",
+        "team": "JAX",
+        "pos": "RB",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Lee Hunter",
+        "team": "CAR",
+        "pos": "DT",
+        "weeks": {
+          "1": 5.0
+        }
+      },
+      {
+        "name": "Leo Chenal",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 9.0
+        }
+      },
+      {
+        "name": "Leonard Williams",
+        "team": "SEA",
+        "pos": "DE",
+        "weeks": {
+          "1": 5.5,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Levi Drake Rodriguez",
+        "team": "MIN",
+        "pos": "DL",
+        "weeks": {
+          "1": 4.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Liam Anderson",
+        "team": "MIA",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Lil'Jordan Humphrey",
+        "team": "DEN",
+        "pos": "WR",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Logan Hall",
+        "team": "HOU",
+        "pos": "DE",
+        "weeks": {
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Lukas Van Ness",
+        "team": "GB",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.0,
+          "2": 9.5
+        }
+      },
+      {
+        "name": "Luke Farrell",
+        "team": "SF",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.9,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Luke Gifford",
+        "team": "SF",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Luke Schoonmaker",
+        "team": "DAL",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.7
+        }
+      },
+      {
+        "name": "Luther Burden III",
+        "team": "CHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 7.25,
+          "2": 4.7
+        }
+      },
+      {
+        "name": "Maason Smith",
+        "team": "ATL",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Mac Jones",
+        "team": "SF",
+        "pos": "QB",
+        "weeks": {
+          "2": 0.3
+        }
+      },
+      {
+        "name": "Mack Hollins",
+        "team": "NE",
+        "pos": "WR",
+        "weeks": {
+          "1": 7.1,
+          "2": 2.8
+        }
+      },
+      {
+        "name": "Mack Wilson",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.0,
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Makai Lemon",
+        "team": "PHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.0,
+          "2": 2.65
+        }
+      },
+      {
+        "name": "Malachi Corley",
+        "team": "CLE",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Malachi Fields",
+        "team": "NYG",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Malachi Lawrence",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Malachi Moore",
+        "team": "NYJ",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Malaki Starks",
+        "team": "BAL",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Malcolm Koonce",
+        "team": "LV",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Malcolm Roach",
+        "team": "DEN",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Malcolm Rodriguez",
+        "team": "DET",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Maliek Collins",
+        "team": "CLE",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Malik Benson",
+        "team": "LV",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.55,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Malik Harrison",
+        "team": "NYG",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Malik Herring",
+        "team": "MIA",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Malik Hooker",
+        "team": "DAL",
+        "pos": "FS",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Malik Muhammad",
+        "team": "CHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 7.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Malik Mustapha",
+        "team": "SF",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Malik Nabers",
+        "team": "NYG",
+        "pos": "WR",
+        "weeks": {
+          "1": 9.9,
+          "2": 0.6
+        }
+      },
+      {
+        "name": "Malik Washington",
+        "team": "MIA",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.8,
+          "2": 6.95
+        }
+      },
+      {
+        "name": "Malik Willis",
+        "team": "MIA",
+        "pos": "QB",
+        "weeks": {
+          "1": 19.2,
+          "2": 12.98
+        }
+      },
+      {
+        "name": "Mansoor Delane",
+        "team": "KC",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0
+        }
+      },
+      {
+        "name": "MarShawn Lloyd",
+        "team": "GB",
+        "pos": "RB",
+        "weeks": {
+          "1": 6.95,
+          "2": 9.1
+        }
+      },
+      {
+        "name": "Marcelino McCrary-Ball",
+        "team": "NYJ",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.0
+        }
+      },
+      {
+        "name": "Marcus Epps",
+        "team": "PHI",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Marcus Harris",
+        "team": "TEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.0,
+          "2": 9.0
+        }
+      },
+      {
+        "name": "Marcus Jones",
+        "team": "NE",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Marcus Mariota",
+        "team": "WAS",
+        "pos": "QB",
+        "weeks": {
+          "2": 8.99
+        }
+      },
+      {
+        "name": "Mario Edwards",
+        "team": "HOU",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Mark Andrews",
+        "team": "BAL",
+        "pos": "TE",
+        "weeks": {
+          "1": 6.9,
+          "2": 7.9
+        }
+      },
+      {
+        "name": "Markquese Bell",
+        "team": "DAL",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Marlin Klein",
+        "team": "HOU",
+        "pos": "TE",
+        "weeks": {
+          "1": 2.1
+        }
+      },
+      {
+        "name": "Marlon Humphrey",
+        "team": "BAL",
+        "pos": "CB",
+        "weeks": {
+          "1": 8.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Marques Sigle",
+        "team": "SF",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.5,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Marquise Brown",
+        "team": "PHI",
+        "pos": "WR",
+        "weeks": {
+          "2": 1.7
+        }
+      },
+      {
+        "name": "Martin Emerson",
+        "team": "NO",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Marvin Harrison Jr.",
+        "team": "ARI",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.8,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Marvin Mims Jr.",
+        "team": "DEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Mason Graham",
+        "team": "CLE",
+        "pos": "DT",
+        "weeks": {
+          "1": 5.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Mason Rudolph",
+        "team": "PIT",
+        "pos": "QB",
+        "weeks": {
+          "2": 0.55
+        }
+      },
+      {
+        "name": "Mason Taylor",
+        "team": "NYJ",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.8
+        }
+      },
+      {
+        "name": "Matt Dickerson",
+        "team": "JAX",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Matt Gay",
+        "team": "LV",
+        "pos": "K",
+        "weeks": {
+          "1": 10.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Matthew Golden",
+        "team": "GB",
+        "pos": "WR",
+        "weeks": {
+          "1": 12.5,
+          "2": 7.8
+        }
+      },
+      {
+        "name": "Matthew Hibner",
+        "team": "BAL",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.8
+        }
+      },
+      {
+        "name": "Matthew Stafford",
+        "team": "LA",
+        "pos": "QB",
+        "weeks": {
+          "1": 5.6,
+          "2": 28.98
+        }
+      },
+      {
+        "name": "Max Melton",
+        "team": "ARI",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Maxwell Hairston",
+        "team": "BUF",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Maxx Crosby",
+        "team": "LV",
+        "pos": "DE",
+        "weeks": {
+          "1": 4.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Mekhi Blackmon",
+        "team": "CLE",
+        "pos": "DB",
+        "weeks": {
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Micah Robinson",
+        "team": "TEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Michael Carter II",
+        "team": "PHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Michael Danna",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Michael Hoecht",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Michael Mayer",
+        "team": "LV",
+        "pos": "TE",
+        "weeks": {
+          "1": 6.2,
+          "2": 3.8
+        }
+      },
+      {
+        "name": "Michael Pittman",
+        "team": "PIT",
+        "pos": "WR",
+        "weeks": {
+          "1": 7.3
+        }
+      },
+      {
+        "name": "Michael Taaffe",
+        "team": "MIA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.5,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Michael Wilson",
+        "team": "ARI",
+        "pos": "WR",
+        "weeks": {
+          "1": 8.1,
+          "2": 2.8
+        }
+      },
+      {
+        "name": "Mike Evans",
+        "team": "SF",
+        "pos": "WR",
+        "weeks": {
+          "1": 13.9,
+          "2": 6.9
+        }
+      },
+      {
+        "name": "Mike Ford",
+        "team": "ATL",
+        "pos": "DB",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Mike Gesicki",
+        "team": "CIN",
+        "pos": "TE",
+        "weeks": {
+          "1": 16.3
+        }
+      },
+      {
+        "name": "Mike Green",
+        "team": "BAL",
+        "pos": "LB",
+        "weeks": {
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Mike Hughes",
+        "team": "ATL",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Mike Jackson",
+        "team": "CAR",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Mike Sainristil",
+        "team": "WAS",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Mike Washington Jr.",
+        "team": "LV",
+        "pos": "RB",
+        "weeks": {
+          "1": 5.85,
+          "2": 1.45
+        }
+      },
+      {
+        "name": "Milton Williams",
+        "team": "NE",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Mitchell Evans",
+        "team": "CAR",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.4,
+          "2": 1.8
+        }
+      },
+      {
+        "name": "Mohamoud Diabate",
+        "team": "TEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Montaric Brown",
+        "team": "JAX",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Montez Sweat",
+        "team": "CHI",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Montorie Foster Jr",
+        "team": "SEA",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Moro Ojomo",
+        "team": "PHI",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Myles Harden",
+        "team": "CLE",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.5,
+          "2": 8.5
+        }
+      },
+      {
+        "name": "Myles Murphy",
+        "team": "CIN",
+        "pos": "DE",
+        "weeks": {
+          "1": 4.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Myles Price",
+        "team": "MIN",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Nahshon Wright",
+        "team": "NYJ",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Najee Harris",
+        "team": "NYG",
+        "pos": "RB",
+        "weeks": {
+          "2": 1.6
+        }
+      },
+      {
+        "name": "Nakobe Dean",
+        "team": "LV",
+        "pos": "LB",
+        "weeks": {
+          "1": 8.5,
+          "2": 11.5
+        }
+      },
+      {
+        "name": "Namdi Obiazor",
+        "team": "NE",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Nate Adkins",
+        "team": "DEN",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.0,
+          "2": 11.55
+        }
+      },
+      {
+        "name": "Nate Boerkircher",
+        "team": "JAX",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.4
+        }
+      },
+      {
+        "name": "Nate Landman",
+        "team": "LA",
+        "pos": "LB",
+        "weeks": {
+          "1": 7.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Nate Wiggins",
+        "team": "BAL",
+        "pos": "CB",
+        "weeks": {
+          "1": 4.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Nathan Shepherd",
+        "team": "NO",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Nathaniel Watson",
+        "team": "CLE",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Nazir Stackhouse",
+        "team": "TEN",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Nehemiah Pritchett",
+        "team": "SEA",
+        "pos": "CB",
+        "weeks": {
+          "1": 10.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Neville Gallimore",
+        "team": "CHI",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Nic Jones",
+        "team": "NYG",
+        "pos": "CB",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Nicholas Singleton",
+        "team": "TEN",
+        "pos": "RB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Nick Barrett",
+        "team": "LAC",
+        "pos": "DT",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Nick Bolton",
+        "team": "KC",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.0,
+          "2": 9.5
+        }
+      },
+      {
+        "name": "Nick Bosa",
+        "team": "SF",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Nick Cross",
+        "team": "WAS",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Nick Emmanwori",
+        "team": "SEA",
+        "pos": "SAF",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Nick Folk",
+        "team": "ATL",
+        "pos": "K",
+        "weeks": {
+          "1": 9.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Nick Herbig",
+        "team": "PIT",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Nick Mullens",
+        "team": "JAX",
+        "pos": "QB",
+        "weeks": {
+          "1": 0.45
+        }
+      },
+      {
+        "name": "Nick Muse",
+        "team": "ATL",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Nick Niemann",
+        "team": "GB",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Nick Scott",
+        "team": "CAR",
+        "pos": "SAF",
+        "weeks": {
+          "1": 6.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Nico Collins",
+        "team": "HOU",
+        "pos": "WR",
+        "weeks": {
+          "1": 17.95
+        }
+      },
+      {
+        "name": "Nik Bonitto",
+        "team": "DEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Nikko Remigio",
+        "team": "KC",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Noah Fant",
+        "team": "NO",
+        "pos": "TE",
+        "weeks": {
+          "1": 12.3,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Noah Gray",
+        "team": "KC",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Noah Igbinoghene",
+        "team": "CLE",
+        "pos": "CB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Nohl Williams",
+        "team": "KC",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Nolan Smith",
+        "team": "PHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Odafe Oweh",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Ogbo Okoronkwo",
+        "team": "SF",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Olamide Zaccheaus",
+        "team": "ATL",
+        "pos": "WR",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.8
+        }
+      },
+      {
+        "name": "Ollie Gordon II",
+        "team": "MIA",
+        "pos": "RB",
+        "weeks": {
+          "2": 1.45
+        }
+      },
+      {
+        "name": "Oluwafemi Oladejo",
+        "team": "TEN",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Omar Cooper Jr.",
+        "team": "NYJ",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.5
+        }
+      },
+      {
+        "name": "Omar Speights",
+        "team": "LA",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Omarion Hampton",
+        "team": "LAC",
+        "pos": "RB",
+        "weeks": {
+          "1": 11.3,
+          "2": 22.25
+        }
+      },
+      {
+        "name": "Oren Burks",
+        "team": "CIN",
+        "pos": "ILB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Oronde Gadsden II",
+        "team": "LAC",
+        "pos": "TE",
+        "weeks": {
+          "1": 4.2,
+          "2": 8.8
+        }
+      },
+      {
+        "name": "Osa Odighizuwa",
+        "team": "SF",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Oscar Delp",
+        "team": "NO",
+        "pos": "TE",
+        "weeks": {
+          "2": 1.3
+        }
+      },
+      {
+        "name": "Otito Ogbonnia",
+        "team": "DAL",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "P.J. Locke",
+        "team": "DAL",
+        "pos": "DB",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "PJ Jules",
+        "team": "CIN",
+        "pos": "SAF",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Parker Washington",
+        "team": "JAX",
+        "pos": "WR",
+        "weeks": {
+          "1": 16.8,
+          "2": 14.3
+        }
+      },
+      {
+        "name": "Pat Bryant",
+        "team": "DEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.2,
+          "2": 1.85
+        }
+      },
+      {
+        "name": "Pat Freiermuth",
+        "team": "PIT",
+        "pos": "TE",
+        "weeks": {
+          "1": 13.1,
+          "2": 5.65
+        }
+      },
+      {
+        "name": "Pat Surtain II",
+        "team": "DEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Patrick Johnson",
+        "team": "LV",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Patrick Mahomes",
+        "team": "KC",
+        "pos": "QB",
+        "weeks": {
+          "1": 24.41,
+          "2": 29.48
+        }
+      },
+      {
+        "name": "Patrick O'Connell",
+        "team": "SEA",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Patrick Queen",
+        "team": "PIT",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Patrick Ricard",
+        "team": "NYG",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Paulson Adebo",
+        "team": "NYG",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0
+        }
+      },
+      {
+        "name": "Payton Wilson",
+        "team": "PIT",
+        "pos": "LB",
+        "weeks": {
+          "1": 9.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Pete Werner",
+        "team": "NO",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.0,
+          "2": 11.5
+        }
+      },
+      {
+        "name": "Peter Woods",
+        "team": "KC",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Poona Ford",
+        "team": "LA",
+        "pos": "DT",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Princely Umanmielen",
+        "team": "CAR",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Puka Nacua",
+        "team": "LA",
+        "pos": "WR",
+        "weeks": {
+          "1": 10.9
+        }
+      },
+      {
+        "name": "Quan Martin",
+        "team": "WAS",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.0,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Quay Walker",
+        "team": "LV",
+        "pos": "LB",
+        "weeks": {
+          "1": 6.0,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Que Robinson",
+        "team": "DEN",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Quentin Johnston",
+        "team": "LAC",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.7,
+          "2": 2.15
+        }
+      },
+      {
+        "name": "Quentin Lake",
+        "team": "LA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 14.5,
+          "2": 11.5
+        }
+      },
+      {
+        "name": "Quincy Riley",
+        "team": "NO",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Quincy Williams",
+        "team": "CLE",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Quinnen Williams",
+        "team": "DAL",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Quinshon Judkins",
+        "team": "CLE",
+        "pos": "RB",
+        "weeks": {
+          "1": 9.0,
+          "2": 10.3
+        }
+      },
+      {
+        "name": "Quintayvious Hutchins",
+        "team": "NE",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Quintin Morris",
+        "team": "JAX",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.2
+        }
+      },
+      {
+        "name": "Quinyon Mitchell",
+        "team": "PHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Qwan'tez Stiggers",
+        "team": "NYJ",
+        "pos": "DB",
+        "weeks": {
+          "1": 2.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "R Mason Thomas",
+        "team": "KC",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.5,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "R.J. Mickens",
+        "team": "LAC",
+        "pos": "SAF",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "RJ Harvey",
+        "team": "DEN",
+        "pos": "RB",
+        "weeks": {
+          "1": 6.85
+        }
+      },
+      {
+        "name": "Rachaad White",
+        "team": "WAS",
+        "pos": "RB",
+        "weeks": {
+          "1": 5.45,
+          "2": 13.05
+        }
+      },
+      {
+        "name": "Raheim Sanders",
+        "team": "CLE",
+        "pos": "RB",
+        "weeks": {
+          "1": 4.35,
+          "2": 2.1
+        }
+      },
+      {
+        "name": "Rakeem Nunez-Roches",
+        "team": "TB",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Rashan Gary",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Rashee Rice",
+        "team": "KC",
+        "pos": "WR",
+        "weeks": {
+          "1": 8.9,
+          "2": 10.3
+        }
+      },
+      {
+        "name": "Rasheen Ali",
+        "team": "BAL",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Rashid Shaheed",
+        "team": "SEA",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.9,
+          "2": 5.65
+        }
+      },
+      {
+        "name": "Rashod Bateman",
+        "team": "BAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 19.3
+        }
+      },
+      {
+        "name": "Rasul Douglas",
+        "team": "WAS",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Ray Davis",
+        "team": "BUF",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.55,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Rayshawn Jenkins",
+        "team": "PIT",
+        "pos": "DB",
+        "weeks": {
+          "1": 1.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Rayuan Lane III",
+        "team": "JAX",
+        "pos": "SAF",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Reed Blankenship",
+        "team": "HOU",
+        "pos": "SAF",
+        "weeks": {
+          "1": 5.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Reese Taylor",
+        "team": "MIA",
+        "pos": "DB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Reggie Gilliam",
+        "team": "NE",
+        "pos": "RB",
+        "weeks": {
+          "2": 1.9
+        }
+      },
+      {
+        "name": "Renardo Green",
+        "team": "SF",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Rhamondre Stevenson",
+        "team": "NE",
+        "pos": "RB",
+        "weeks": {
+          "1": 16.5,
+          "2": 4.6
+        }
+      },
+      {
+        "name": "Rico Dowdle",
+        "team": "PIT",
+        "pos": "RB",
+        "weeks": {
+          "1": 5.1,
+          "2": 7.15
+        }
+      },
+      {
+        "name": "Riley Moss",
+        "team": "DEN",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Riley Nowakowski",
+        "team": "PIT",
+        "pos": "FB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Riley Patterson",
+        "team": "MIA",
+        "pos": "K",
+        "weeks": {
+          "1": 9.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Riq Woolen",
+        "team": "PHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Rob Beal Jr.",
+        "team": "MIA",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Robert Spears-Jennings",
+        "team": "PIT",
+        "pos": "SAF",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Robert Spillane",
+        "team": "NE",
+        "pos": "LB",
+        "weeks": {
+          "1": 7.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Rock Ya-Sin",
+        "team": "DET",
+        "pos": "CB",
+        "weeks": {
+          "1": 7.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Rodney Shelley",
+        "team": "LAC",
+        "pos": "DB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Rodney Thomas",
+        "team": "SEA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Roger McCreary",
+        "team": "DET",
+        "pos": "CB",
+        "weeks": {
+          "1": 8.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Roman Wilson",
+        "team": "PIT",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.1,
+          "2": 5.3
+        }
+      },
+      {
+        "name": "Rome Odunze",
+        "team": "CHI",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.2,
+          "2": 6.8
+        }
+      },
+      {
+        "name": "Romello Height",
+        "team": "SF",
+        "pos": "DE",
+        "weeks": {
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Romeo Doubs",
+        "team": "NE",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 11.1
+        }
+      },
+      {
+        "name": "Ronnie Hickman Jr.",
+        "team": "CLE",
+        "pos": "SAF",
+        "weeks": {
+          "1": 5.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Ronnie Rivers",
+        "team": "LA",
+        "pos": "RB",
+        "weeks": {
+          "1": 4.15
+        }
+      },
+      {
+        "name": "Roquan Smith",
+        "team": "BAL",
+        "pos": "ILB",
+        "weeks": {
+          "1": 12.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Roschon Johnson",
+        "team": "CHI",
+        "pos": "RB",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Roy Lopez",
+        "team": "ARI",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Rueben Bain Jr.",
+        "team": "TB",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Ruke Orhorhoro",
+        "team": "JAX",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Ryan Fitzgerald",
+        "team": "CAR",
+        "pos": "K",
+        "weeks": {
+          "1": 8.0,
+          "2": 10.0
+        }
+      },
+      {
+        "name": "Ryan Flournoy",
+        "team": "DAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.2,
+          "2": 4.8
+        }
+      },
+      {
+        "name": "Ryan Miller",
+        "team": "MIA",
+        "pos": "WR",
+        "weeks": {
+          "2": 14.2
+        }
+      },
+      {
+        "name": "Rylie Mills",
+        "team": "SEA",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Sabastian Harsh",
+        "team": "HOU",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Sam Darnold",
+        "team": "SEA",
+        "pos": "QB",
+        "weeks": {
+          "1": 0.52
+        }
+      },
+      {
+        "name": "Sam Franklin Jr.",
+        "team": "BUF",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Sam LaPorta",
+        "team": "DET",
+        "pos": "TE",
+        "weeks": {
+          "1": 7.3,
+          "2": 14.2
+        }
+      },
+      {
+        "name": "Sam Roush",
+        "team": "CHI",
+        "pos": "TE",
+        "weeks": {
+          "2": 1.4
+        }
+      },
+      {
+        "name": "Sam Williams",
+        "team": "CLE",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Samaje Perine",
+        "team": "CIN",
+        "pos": "RB",
+        "weeks": {
+          "1": 9.25,
+          "2": 3.2
+        }
+      },
+      {
+        "name": "Samson Ebukam",
+        "team": "ATL",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Saquon Barkley",
+        "team": "PHI",
+        "pos": "RB",
+        "weeks": {
+          "1": 12.25,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Sauce Gardner",
+        "team": "IND",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Sebastian Joseph-Day",
+        "team": "PIT",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Segun Olubi",
+        "team": "LV",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Seth McGowan",
+        "team": "IND",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Shaun Dolac",
+        "team": "LA",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.5
+        }
+      },
+      {
+        "name": "Shavon Revel Jr.",
+        "team": "DAL",
+        "pos": "CB",
+        "weeks": {
+          "1": 3.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Shelby Harris",
+        "team": "NYG",
+        "pos": "DE",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Sheldon Rankins",
+        "team": "HOU",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Shemar James",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Shemar Stewart",
+        "team": "CIN",
+        "pos": "DE",
+        "weeks": {
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Shy Tuttle",
+        "team": "WAS",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Simi Fehoko",
+        "team": "ARI",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.5
+        }
+      },
+      {
+        "name": "Sione Vaki",
+        "team": "DET",
+        "pos": "RB",
+        "weeks": {
+          "1": 2.8,
+          "2": 2.75
+        }
+      },
+      {
+        "name": "SirVocea Dennis",
+        "team": "TB",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Siran Neal",
+        "team": "SF",
+        "pos": "DB",
+        "weeks": {
+          "1": 3.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Skyler Gill-Howard",
+        "team": "DET",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Skyler Thomas",
+        "team": "CHI",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Skyy Moore",
+        "team": "GB",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.6
+        }
+      },
+      {
+        "name": "Smael Mondon Jr.",
+        "team": "PHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Solomon Thomas",
+        "team": "TEN",
+        "pos": "DT",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Sonny Styles",
+        "team": "WAS",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Spencer Shrader",
+        "team": "IND",
+        "pos": "K",
+        "weeks": {
+          "1": 5.5,
+          "2": 14.0
+        }
+      },
+      {
+        "name": "Stefon Diggs",
+        "team": "WAS",
+        "pos": "WR",
+        "weeks": {
+          "1": 13.5,
+          "2": 19.2
+        }
+      },
+      {
+        "name": "Stetson Bennett",
+        "team": "LA",
+        "pos": "QB",
+        "weeks": {
+          "1": 1.67
+        }
+      },
+      {
+        "name": "Swayze Bozeman",
+        "team": "CIN",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Sydney Brown",
+        "team": "ATL",
+        "pos": "SAF",
+        "weeks": {
+          "1": 5.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "T'Vondre Sweat",
+        "team": "NYJ",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "T.J. Edwards",
+        "team": "CHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "T.J. Hockenson",
+        "team": "MIN",
+        "pos": "TE",
+        "weeks": {
+          "1": 12.6,
+          "2": 4.4
+        }
+      },
+      {
+        "name": "T.J. Tampa",
+        "team": "BAL",
+        "pos": "CB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "T.J. Watt",
+        "team": "PIT",
+        "pos": "OLB",
+        "weeks": {
+          "1": 16.0,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "TJ Parker",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Tacario Davis",
+        "team": "CIN",
+        "pos": "CB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Tahj Brooks",
+        "team": "CIN",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Tahj Chambers",
+        "team": "IND",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Talanoa Hufanga",
+        "team": "DEN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Tank Bigsby",
+        "team": "PHI",
+        "pos": "RB",
+        "weeks": {
+          "1": 0.55,
+          "2": 15.05
+        }
+      },
+      {
+        "name": "Tanner Hudson",
+        "team": "CIN",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.9
+        }
+      },
+      {
+        "name": "Tanner Ingle",
+        "team": "LA",
+        "pos": "SAF",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Tarheeb Still",
+        "team": "LAC",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Taron Johnson",
+        "team": "LV",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Tavius Robinson",
+        "team": "BAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 4.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Tay Martin",
+        "team": "DET",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "TeRah Edwards",
+        "team": "CAR",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Teair Tart",
+        "team": "LAC",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Ted Hurst III",
+        "team": "TB",
+        "pos": "WR",
+        "weeks": {
+          "1": 5.1,
+          "2": 4.7
+        }
+      },
+      {
+        "name": "Tedarrell Slaton",
+        "team": "CIN",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Tee Higgins",
+        "team": "CIN",
+        "pos": "WR",
+        "weeks": {
+          "1": 7.4,
+          "2": 12.0
+        }
+      },
+      {
+        "name": "Terrance Ferguson",
+        "team": "LA",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.0,
+          "2": 14.4
+        }
+      },
+      {
+        "name": "Terrel Bernard",
+        "team": "BUF",
+        "pos": "LB",
+        "weeks": {
+          "1": 10.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Terrell Burgess",
+        "team": "TEN",
+        "pos": "SAF",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Terry McLaurin",
+        "team": "WAS",
+        "pos": "WR",
+        "weeks": {
+          "1": 2.4,
+          "2": 6.0
+        }
+      },
+      {
+        "name": "Tetairoa McMillan",
+        "team": "CAR",
+        "pos": "WR",
+        "weeks": {
+          "1": 8.0,
+          "2": 12.6
+        }
+      },
+      {
+        "name": "Tez Johnson",
+        "team": "TB",
+        "pos": "WR",
+        "weeks": {
+          "1": -0.15,
+          "2": 5.4
+        }
+      },
+      {
+        "name": "Theo Jackson",
+        "team": "MIN",
+        "pos": "DB",
+        "weeks": {
+          "1": 2.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Theo Johnson",
+        "team": "NYG",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.4,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Thomas Booker",
+        "team": "LV",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Thomas Harper",
+        "team": "DET",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Thomas Incoom",
+        "team": "CAR",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Tim Settle",
+        "team": "WAS",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Tim Smith",
+        "team": "IND",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Tom Kennedy",
+        "team": "DET",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Tommy Eichenberg",
+        "team": "LV",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Tommy Togiai",
+        "team": "HOU",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Tommy Tremble",
+        "team": "CAR",
+        "pos": "TE",
+        "weeks": {
+          "1": 4.0,
+          "2": 0.9
+        }
+      },
+      {
+        "name": "Tonka Hemingway",
+        "team": "LV",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Tony Adams",
+        "team": "TEN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Tony Jefferson",
+        "team": "LAC",
+        "pos": "S",
+        "weeks": {
+          "1": 3.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Tony Pollard",
+        "team": "TEN",
+        "pos": "RB",
+        "weeks": {
+          "1": 5.65,
+          "2": 10.5
+        }
+      },
+      {
+        "name": "Travis Etienne",
+        "team": "NO",
+        "pos": "RB",
+        "weeks": {
+          "1": 13.55,
+          "2": 8.1
+        }
+      },
+      {
+        "name": "Travis Homer",
+        "team": "PIT",
+        "pos": "RB",
+        "weeks": {
+          "2": 2.1
+        }
+      },
+      {
+        "name": "Travis Hunter",
+        "team": "JAX",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.85,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Travis Jones",
+        "team": "BAL",
+        "pos": "DT",
+        "weeks": {
+          "1": 3.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Travis Kelce",
+        "team": "KC",
+        "pos": "TE",
+        "weeks": {
+          "1": 8.6,
+          "2": 20.6
+        }
+      },
+      {
+        "name": "Travon Walker",
+        "team": "JAX",
+        "pos": "DE",
+        "weeks": {
+          "1": 5.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Tre Harris",
+        "team": "LAC",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.5,
+          "2": 5.8
+        }
+      },
+      {
+        "name": "Tre Tucker",
+        "team": "LV",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.7,
+          "2": 20.4
+        }
+      },
+      {
+        "name": "Tre'von Moehrig",
+        "team": "CAR",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "TreVeyon Henderson",
+        "team": "NE",
+        "pos": "RB",
+        "weeks": {
+          "2": 17.6
+        }
+      },
+      {
+        "name": "Tremaine Edmunds",
+        "team": "NYG",
+        "pos": "MLB",
+        "weeks": {
+          "1": 7.5,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Tremon Smith",
+        "team": "HOU",
+        "pos": "CB",
+        "weeks": {
+          "1": 1.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Trent McDuffie",
+        "team": "LA",
+        "pos": "CB",
+        "weeks": {
+          "1": 6.0,
+          "2": 9.0
+        }
+      },
+      {
+        "name": "Trenton Simpson",
+        "team": "BAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.5,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Trevis Gipson",
+        "team": "CAR",
+        "pos": "LB",
+        "weeks": {
+          "1": 2.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Trevor Lawrence",
+        "team": "JAX",
+        "pos": "QB",
+        "weeks": {
+          "1": 26.6,
+          "2": 7.66
+        }
+      },
+      {
+        "name": "Trevor Nowaske",
+        "team": "DET",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Trey Hendrickson",
+        "team": "BAL",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Trey McBride",
+        "team": "ARI",
+        "pos": "TE",
+        "weeks": {
+          "1": 20.0,
+          "2": 14.1
+        }
+      },
+      {
+        "name": "Trey Smack",
+        "team": "GB",
+        "pos": "K",
+        "weeks": {
+          "1": 11.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Treydan Stukes",
+        "team": "LV",
+        "pos": "SAF",
+        "weeks": {
+          "1": 9.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Treylon Burks",
+        "team": "WAS",
+        "pos": "WR",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Treyton Welch",
+        "team": "NO",
+        "pos": "TE",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Troy Dye",
+        "team": "LAC",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Troy Franklin",
+        "team": "DEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.75,
+          "2": 3.2
+        }
+      },
+      {
+        "name": "Troy Reeder",
+        "team": "NYJ",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Truman Jones",
+        "team": "TEN",
+        "pos": "DE",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Tucker Kraft",
+        "team": "GB",
+        "pos": "TE",
+        "weeks": {
+          "1": 8.0,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Tuli Tuipulotu",
+        "team": "LAC",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Tutu Atwell",
+        "team": "LA",
+        "pos": "WR",
+        "weeks": {
+          "2": 2.4
+        }
+      },
+      {
+        "name": "Ty Hamilton",
+        "team": "LA",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Ty'Ron Hopper",
+        "team": "GB",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Tycen Anderson",
+        "team": "DEN",
+        "pos": "SAF",
+        "weeks": {
+          "1": 0.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Tyjae Spears",
+        "team": "TEN",
+        "pos": "RB",
+        "weeks": {
+          "1": 4.15,
+          "2": 9.75
+        }
+      },
+      {
+        "name": "Tykee Smith",
+        "team": "TB",
+        "pos": "SAF",
+        "weeks": {
+          "1": 4.5,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Tyleik Williams",
+        "team": "DET",
+        "pos": "DT",
+        "weeks": {
+          "1": 2.0,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Tyler Allgeier",
+        "team": "ARI",
+        "pos": "RB",
+        "weeks": {
+          "1": 12.25,
+          "2": 4.15
+        }
+      },
+      {
+        "name": "Tyler Badie",
+        "team": "DEN",
+        "pos": "RB",
+        "weeks": {
+          "2": 5.15
+        }
+      },
+      {
+        "name": "Tyler Bass",
+        "team": "BUF",
+        "pos": "K",
+        "weeks": {
+          "1": 13.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Tyler Davis",
+        "team": "LA",
+        "pos": "DE",
+        "weeks": {
+          "1": 4.5
+        }
+      },
+      {
+        "name": "Tyler Higbee",
+        "team": "LA",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.2
+        }
+      },
+      {
+        "name": "Tyler Lacy",
+        "team": "DET",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Tyler Loop",
+        "team": "BAL",
+        "pos": "K",
+        "weeks": {
+          "1": 15.0,
+          "2": 7.0
+        }
+      },
+      {
+        "name": "Tyler Nubin",
+        "team": "NYG",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.0,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Tyler Owens",
+        "team": "WAS",
+        "pos": "DB",
+        "weeks": {
+          "1": 2.0
+        }
+      },
+      {
+        "name": "Tyler Shough",
+        "team": "NO",
+        "pos": "QB",
+        "weeks": {
+          "1": 26.2,
+          "2": 24.63
+        }
+      },
+      {
+        "name": "Tyler Warren",
+        "team": "IND",
+        "pos": "TE",
+        "weeks": {
+          "1": 8.8,
+          "2": 11.65
+        }
+      },
+      {
+        "name": "Tyquan Thornton",
+        "team": "KC",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 10.6
+        }
+      },
+      {
+        "name": "Tyree Wilson",
+        "team": "NO",
+        "pos": "DE",
+        "weeks": {
+          "1": 1.0
+        }
+      },
+      {
+        "name": "Tyrion Ingram-Dawkins",
+        "team": "MIN",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Tyrique Stevenson",
+        "team": "CHI",
+        "pos": "CB",
+        "weeks": {
+          "1": 7.5,
+          "2": 4.0
+        }
+      },
+      {
+        "name": "Tyrone Tracy Jr.",
+        "team": "NYG",
+        "pos": "RB",
+        "weeks": {
+          "1": -0.1,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Tyrus Wheat",
+        "team": "DAL",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Tyson Bagent",
+        "team": "CHI",
+        "pos": "QB",
+        "weeks": {
+          "2": 2.16
+        }
+      },
+      {
+        "name": "Tyson Campbell",
+        "team": "CLE",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Uchenna Nwosu",
+        "team": "SEA",
+        "pos": "LB",
+        "weeks": {
+          "1": 5.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Upton Stout",
+        "team": "SF",
+        "pos": "CB",
+        "weeks": {
+          "1": 2.0,
+          "2": 5.5
+        }
+      },
+      {
+        "name": "Ventrell Miller",
+        "team": "JAX",
+        "pos": "LB",
+        "weeks": {
+          "1": 12.5,
+          "2": 5.0
+        }
+      },
+      {
+        "name": "Vernon Broughton",
+        "team": "NO",
+        "pos": "DT",
+        "weeks": {
+          "1": 6.0,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Vita Vea",
+        "team": "TB",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Von Miller",
+        "team": "DAL",
+        "pos": "OLB",
+        "weeks": {
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Wade Woodaz",
+        "team": "HOU",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5
+        }
+      },
+      {
+        "name": "Walter Nolen",
+        "team": "ARI",
+        "pos": "DT",
+        "weeks": {
+          "1": 0.5,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Wan'Dale Robinson",
+        "team": "TEN",
+        "pos": "WR",
+        "weeks": {
+          "1": 6.3,
+          "2": 1.4
+        }
+      },
+      {
+        "name": "Wesley Bailey",
+        "team": "LA",
+        "pos": "LB",
+        "weeks": {
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Wil Lutz",
+        "team": "DEN",
+        "pos": "K",
+        "weeks": {
+          "1": 4.0,
+          "2": 9.0
+        }
+      },
+      {
+        "name": "Will Anderson Jr.",
+        "team": "HOU",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.0,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Will Johnson",
+        "team": "ARI",
+        "pos": "CB",
+        "weeks": {
+          "1": 5.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Will Kacmarek",
+        "team": "MIA",
+        "pos": "TE",
+        "weeks": {
+          "1": 0.0,
+          "2": 1.4
+        }
+      },
+      {
+        "name": "Will Lee III",
+        "team": "CAR",
+        "pos": "CB",
+        "weeks": {
+          "1": 8.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Will McDonald IV",
+        "team": "NYJ",
+        "pos": "DE",
+        "weeks": {
+          "1": 3.0
+        }
+      },
+      {
+        "name": "Will Reichard",
+        "team": "MIN",
+        "pos": "K",
+        "weeks": {
+          "1": 7.0,
+          "2": 10.0
+        }
+      },
+      {
+        "name": "Will Shipley",
+        "team": "PHI",
+        "pos": "RB",
+        "weeks": {
+          "1": 2.7,
+          "2": 5.65
+        }
+      },
+      {
+        "name": "Willie Gay Jr.",
+        "team": "MIA",
+        "pos": "LB",
+        "weeks": {
+          "1": 0.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Winston Reid",
+        "team": "CLE",
+        "pos": "LB",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Woody Marks",
+        "team": "HOU",
+        "pos": "RB",
+        "weeks": {
+          "1": 6.75,
+          "2": 8.0
+        }
+      },
+      {
+        "name": "Wydett Williams Jr.",
+        "team": "ARI",
+        "pos": "SAF",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Xavier Hutchinson",
+        "team": "HOU",
+        "pos": "WR",
+        "weeks": {
+          "1": 4.7,
+          "2": 5.2
+        }
+      },
+      {
+        "name": "Xavier Legette",
+        "team": "CAR",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 7.4
+        }
+      },
+      {
+        "name": "Xavier McKinney",
+        "team": "GB",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Xavier Nwankpa",
+        "team": "KC",
+        "pos": "SAF",
+        "weeks": {
+          "1": 1.5
+        }
+      },
+      {
+        "name": "Xavier Smith",
+        "team": "LA",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Xavier Watts",
+        "team": "ATL",
+        "pos": "SAF",
+        "weeks": {
+          "1": 3.0,
+          "2": 8.5
+        }
+      },
+      {
+        "name": "Xavier Woods",
+        "team": "CHI",
+        "pos": "FS",
+        "weeks": {
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Xavier Worthy",
+        "team": "KC",
+        "pos": "WR",
+        "weeks": {
+          "1": 3.3,
+          "2": 11.0
+        }
+      },
+      {
+        "name": "Yahya Black",
+        "team": "PIT",
+        "pos": "DE",
+        "weeks": {
+          "1": 0.0
+        }
+      },
+      {
+        "name": "Yasir Abdullah",
+        "team": "ATL",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Yaya Diaby",
+        "team": "TB",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 3.0
+        }
+      },
+      {
+        "name": "Za'Darius Smith",
+        "team": "ATL",
+        "pos": "DE",
+        "weeks": {
+          "1": 6.0,
+          "2": 3.5
+        }
+      },
+      {
+        "name": "Zach Allen",
+        "team": "DEN",
+        "pos": "DE",
+        "weeks": {
+          "1": 8.0,
+          "2": 1.0
+        }
+      },
+      {
+        "name": "Zach Harrison",
+        "team": "ATL",
+        "pos": "DE",
+        "weeks": {
+          "2": 1.5
+        }
+      },
+      {
+        "name": "Zach Sieler",
+        "team": "MIA",
+        "pos": "DE",
+        "weeks": {
+          "1": 2.5,
+          "2": 0.5
+        }
+      },
+      {
+        "name": "Zachariah Branch",
+        "team": "ATL",
+        "pos": "WR",
+        "weeks": {
+          "1": 0.0,
+          "2": 2.4
+        }
+      },
+      {
+        "name": "Zack Baun",
+        "team": "PHI",
+        "pos": "LB",
+        "weeks": {
+          "1": 11.5,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Zaire Barnes",
+        "team": "NYG",
+        "pos": "LB",
+        "weeks": {
+          "1": 1.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Zaire Franklin",
+        "team": "GB",
+        "pos": "OLB",
+        "weeks": {
+          "1": 3.0,
+          "2": 4.5
+        }
+      },
+      {
+        "name": "Zakee Wheatley",
+        "team": "CAR",
+        "pos": "SAF",
+        "weeks": {
+          "2": 6.5
+        }
+      },
+      {
+        "name": "Zaven Collins",
+        "team": "ARI",
+        "pos": "LB",
+        "weeks": {
+          "1": 3.0,
+          "2": 7.5
+        }
+      },
+      {
+        "name": "Zavion Thomas",
+        "team": "CHI",
+        "pos": "WR",
+        "weeks": {
+          "2": 0.0
+        }
+      },
+      {
+        "name": "Zay Flowers",
+        "team": "BAL",
+        "pos": "WR",
+        "weeks": {
+          "1": 23.5
+        }
+      },
+      {
+        "name": "Zayne Anderson",
+        "team": "MIA",
+        "pos": "SAF",
+        "weeks": {
+          "1": 5.0,
+          "2": 2.0
+        }
+      },
+      {
+        "name": "Zeek Biggers",
+        "team": "MIA",
+        "pos": "DT",
+        "weeks": {
+          "1": 1.5,
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Zion Young",
+        "team": "BAL",
+        "pos": "LB",
+        "weeks": {
+          "2": 2.5
+        }
+      },
+      {
+        "name": "Zyon McCollum",
+        "team": "TB",
+        "pos": "CB",
+        "weeks": {
+          "1": 10.5,
+          "2": 3.0
+        }
       }
     ]
   },
