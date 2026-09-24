@@ -683,6 +683,16 @@ def build(season: int, week: int | None) -> dict:
         log(f"Scoring Week {week - 1} player points...")
         points = player_points_for_week(cur_stats, schedule, season, week - 1)
 
+    season_points = None
+    if cur_stats is not None and week > 1:
+        sp = cur_stats[(cur_stats["week"] < week) & cur_stats["player_display_name"].notna()]
+        sp = sp[~sp["position"].isin(NON_FANTASY_POS)]
+        sp = sp.assign(pts=league_points(sp).round(2))
+        season_points = {"throughWeek": week - 1, "players": [
+            {"name": str(n), "team": _canon_team(g["team"].iloc[-1]), "pos": str(g["position"].iloc[-1]),
+             "weeks": {str(int(r.week)): float(r.pts) for r in g.itertuples()}}
+            for n, g in sp.sort_values("week").groupby("player_display_name")]}
+
     usage = None
     if cur_stats is not None and week > 1:
         log("Building usage percentages...")
@@ -717,6 +727,8 @@ def build(season: int, week: int | None) -> dict:
         data["playerPoints"] = points
     if usage:
         data["usage"] = usage
+    if season_points:
+        data["seasonPoints"] = season_points
     if projections:
         data["projections"] = projections
     if projections_prev:
