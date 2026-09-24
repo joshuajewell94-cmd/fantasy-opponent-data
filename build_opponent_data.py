@@ -8,6 +8,7 @@ and writes one weekly file the dashboard imports with one click:
   - who each NFL team plays this week and the fantasy points each defense allows
     to QB/RB/WR/TE (fills Opponent / Opp Pos Avg)
   - every player's points from the week just finished (fills Actual)
+  - season-to-date usage: snap %, target/carry/red-zone/air-yards share (fills Snap %, RZ %)
 Shape:
 
     {
@@ -29,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -39,6 +41,14 @@ import pandas as pd
 # Data sources (all free, no API key, published by nflverse)
 # ---------------------------------------------------------------------------
 SCHEDULE_URL = "https://github.com/nflverse/nfldata/raw/master/data/games.csv"
+SNAPS_URL = (
+    "https://github.com/nflverse/nflverse-data/releases/download/"
+    "snap_counts/snap_counts_{season}.csv"
+)
+PBP_URL = (
+    "https://github.com/nflverse/nflverse-data/releases/download/"
+    "pbp/play_by_play_{season}.csv.gz"
+)
 STATS_URL = (
     "https://github.com/nflverse/nflverse-data/releases/download/"
     "stats_player/stats_player_week_{season}.csv"
@@ -125,6 +135,107 @@ def league_points(df: pd.DataFrame) -> pd.Series:
     # A fumble recovered by the offense and returned for a TD shows up here for skill players
     off_fr_td = col(df, "fumble_recovery_tds") * df["position"].isin(["QB", "RB", "WR", "TE", "FB"])
     return offense + kicking + defense + off_fr_td * s["off_fumble_return_td"]
+
+
+def _norm_name(n: str) -> str:
+    n = str(n).lower()
+    n = re.sub(r"[.'\u2019`]", "", n)
+    n = re.sub(r"\b(jr|sr|ii|iii|iv|v)\b", "", n)
+    return re.sub(r"[^a-z]", "", n)
+
+
+def _canon_team(t: str) -> str:
+    t = str(t).upper()
+    for canon, aliases in TEAM_ALIASES.items():
+        if t in aliases:
+            return canon
+    return t
+
+
+def _load_optional(url: str, **kw) -> pd.DataFrame | None:
+    try:
+        return pd.read_csv(url, low_memory=False, **kw)
+    except Exception as e:
+        log(f"  could not load {url.rsplit('/', 1)[-1]} ({e}); skipping that part")
+        return None
+
+
+NON_FANTASY_POS = {"T", "G", "C", "OT", "OG", "OL", "LS", "P"}
+
+
+def usage_through(stats: pd.DataFrame, season: int, before_week: int) -> dict | None:
+    """Season-to-date usage for every player, from games before `before_week`:
+    snap %, target share, carry share, red-zone share, air-yards share, and per-game volume."""
+    st = stats[(stats["week"] < before_week) & stats["player_display_name"].notna()].copy()
+    st = st[~st["position"].isin(NON_FANTASY_POS)]
+    if st.empty:
+        return None
+    st["team"] = st["team"].map(_canon_team)
+    st["tgt"], st["car"] = col(st, "targets"), col(st, "carries")
+    st["air"] = col(st, "receiving_air_yards").clip(lower=0)
+    team_wk = st.groupby(["team", "week"])[["tgt", "car", "air"]].sum().add_prefix("team_")
+    st = st.join(team_wk, on=["team", "week"])
+
+    # red-zone opportunities (carries + targets inside the 20) from play-by-play
+    pbp = _load_optional(PBP_URL.format(season=season), compression="gzip",
+                         usecols=["week", "season_type", "posteam", "yardline_100", "play_type",
+                                  "two_point_attempt", "rush_attempt", "rusher_player_id", "receiver_player_id"])
+    have_rz = pbp is not None
+    if have_rz:
+        pbp = pbp[(pbp["season_type"] == "REG") & (pbp["week"] < before_week) & (pbp["yardline_100"] <= 20)
+                  & (pbp["play_type"] != "no_play") & (pbp["two_point_attempt"] != 1)]
+        pbp = pbp.assign(posteam=pbp["posteam"].map(_canon_team))
+        rush = pbp[(pbp["rush_attempt"] == 1) & pbp["rusher_player_id"].notna()][["week", "posteam", "rusher_player_id"]]
+        rec = pbp[pbp["receiver_player_id"].notna()][["week", "posteam", "receiver_player_id"]]
+        opps = pd.concat([rush.set_axis(["week", "team", "player_id"], axis=1),
+                          rec.set_axis(["week", "team", "player_id"], axis=1)])
+        pl_rz = opps.groupby(["player_id", "week"]).size().rename("rz")
+        tm_rz = opps.groupby(["team", "week"]).size().rename("team_rz")
+        st = st.join(pl_rz, on=["player_id", "week"]).join(tm_rz, on=["team", "week"])
+        st[["rz", "team_rz"]] = st[["rz", "team_rz"]].fillna(0)
+
+    # snap % from snap counts (matched by name + team)
+    snaps = _load_optional(SNAPS_URL.format(season=season))
+    snap_map = {}
+    if snaps is not None:
+        snaps = snaps[(snaps["game_type"] == "REG") & (snaps["week"] < before_week)].copy()
+        snaps["k"] = snaps["player"].map(_norm_name)
+        snaps["team"] = snaps["team"].map(_canon_team)
+        agg = snaps.groupby(["k", "team"])[["offense_pct", "defense_pct"]].mean() * 100
+        for (k, t), r in agg.iterrows():
+            snap_map[(k, t)] = r
+        by_name = agg.reset_index().groupby("k")
+        snap_single = {k: g.iloc[0] for k, g in by_name if len(g) == 1}
+
+    def pct(a, b):
+        return round(100.0 * a / b, 1) if b else None
+
+    out = []
+    for pid, g in st.groupby("player_id"):
+        last = g.sort_values("week").iloc[-1]
+        n = len(g)
+        rec = {
+            "name": str(last["player_display_name"]), "team": str(last["team"]), "pos": str(last["position"]),
+            "games": int(n),
+            "targets": round(g["tgt"].sum() / n, 1), "carries": round(g["car"].sum() / n, 1),
+            "receptions": round(col(g, "receptions").sum() / n, 1),
+            "opportunities": round((g["tgt"].sum() + g["car"].sum()) / n, 1),
+            "tackles": round((col(g, "def_tackles_solo").sum() + col(g, "def_tackle_assists").sum()) / n, 1),
+            "sacks": round(col(g, "def_sacks").sum() / n, 2),
+            "targetShare": pct(g["tgt"].sum(), g["team_tgt"].sum()),
+            "carryShare": pct(g["car"].sum(), g["team_car"].sum()),
+            "airShare": pct(g["air"].sum(), g["team_air"].sum()),
+            "rzShare": pct(g["rz"].sum(), g["team_rz"].sum()) if have_rz else None,
+        }
+        k = _norm_name(rec["name"])
+        sr = snap_map.get((k, rec["team"])) if snap_map else None
+        if sr is None and snap_map:
+            sr = snap_single.get(k)
+        if sr is not None:
+            rec["snap"] = round(float(sr["offense_pct"]), 1) if sr["offense_pct"] > 0 else None
+            rec["defSnap"] = round(float(sr["defense_pct"]), 1) if sr["defense_pct"] > 0 else None
+        out.append({k2: v for k2, v in rec.items() if v is not None})
+    return {"throughWeek": before_week - 1, "count": len(out), "players": out}
 
 
 def player_points_for_week(stats: pd.DataFrame, schedule: pd.DataFrame, season: int, week: int) -> dict | None:
@@ -251,6 +362,11 @@ def build(season: int, week: int | None) -> dict:
         log(f"Scoring Week {week - 1} player points...")
         points = player_points_for_week(cur_stats, schedule, season, week - 1)
 
+    usage = None
+    if cur_stats is not None and week > 1:
+        log("Building usage percentages...")
+        usage = usage_through(cur_stats, season, week)
+
     cur_games = int(cur["games"].max()) if not cur.empty else 0
     blend = f", blended with {season - 1} at a {PRIOR_WEIGHT}-game weight" if PRIOR_WEIGHT else ""
     data = {
@@ -266,6 +382,8 @@ def build(season: int, week: int | None) -> dict:
     }
     if points:
         data["playerPoints"] = points
+    if usage:
+        data["usage"] = usage
     return data
 
 
@@ -311,7 +429,8 @@ def main() -> None:
     (out / "latest.json").write_text(text)
     log(f"Wrote {out}/week{data['week']}_opponent_data.json and {out}/latest.json "
         f"({len(data['matchups'])} matchup keys, {len(data['defenseAverages'])} defense keys, "
-        f"{data['playerPoints']['count'] if 'playerPoints' in data else 0} player scores)")
+        f"{data['playerPoints']['count'] if 'playerPoints' in data else 0} player scores, "
+        f"{data['usage']['count'] if 'usage' in data else 0} usage profiles)")
 
 
 if __name__ == "__main__":
