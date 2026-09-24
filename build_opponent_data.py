@@ -57,8 +57,10 @@ STATS_URL = (
     "stats_player/stats_player_week_{season}.csv"
 )
 
-POSITIONS = ["QB", "RB", "WR", "TE"]
-POSITION_MAP = {"FB": "RB"}  # count fullbacks as RB
+POSITIONS = ["QB", "RB", "WR", "TE", "K", "DB", "DL", "LB"]
+# nflverse position -> your league's position group (fullbacks count as RB; IDP grouped like Yahoo)
+POSITION_MAP = {"FB": "RB", "DE": "DL", "DT": "DL", "NT": "DL", "ILB": "LB", "OLB": "LB", "MLB": "LB",
+                "CB": "DB", "S": "DB", "SAF": "DB", "FS": "DB", "SS": "DB"}
 
 # How many "games" of last season's average to blend in. Early in the year a
 # defense has only 1-2 games of data, which is very noisy. With PRIOR_WEIGHT=4,
@@ -210,6 +212,11 @@ def usage_through(stats: pd.DataFrame, season: int, before_week: int) -> dict | 
         by_name = agg.reset_index().groupby("k")
         snap_single = {k: g.iloc[0] for k, g in by_name if len(g) == 1}
 
+    snap_last = {}
+    if snaps is not None and not snaps.empty:
+        lw = snaps.sort_values("week").groupby(["k", "team"]).tail(1)
+        snap_last = {(r.k, r.team): (r.offense_pct * 100, r.defense_pct * 100, int(r.week)) for r in lw.itertuples()}
+
     def pct(a, b):
         return round(100.0 * a / b, 1) if b else None
 
@@ -230,6 +237,10 @@ def usage_through(stats: pd.DataFrame, season: int, before_week: int) -> dict | 
             "airShare": pct(g["air"].sum(), g["team_air"].sum()),
             "rzShare": pct(g["rz"].sum(), g["team_rz"].sum()) if have_rz else None,
         }
+        lg = g.sort_values("week").iloc[-1]
+        rec["lastWeek"] = int(lg["week"])
+        rec["targetShareLast"] = pct(lg["tgt"], lg["team_tgt"])
+        rec["carryShareLast"] = pct(lg["car"], lg["team_car"])
         k = _norm_name(rec["name"])
         sr = snap_map.get((k, rec["team"])) if snap_map else None
         if sr is None and snap_map:
@@ -237,6 +248,10 @@ def usage_through(stats: pd.DataFrame, season: int, before_week: int) -> dict | 
         if sr is not None:
             rec["snap"] = round(float(sr["offense_pct"]), 1) if sr["offense_pct"] > 0 else None
             rec["defSnap"] = round(float(sr["defense_pct"]), 1) if sr["defense_pct"] > 0 else None
+            sl = snap_last.get((k, rec["team"]))
+            if sl is not None:
+                rec["snapLast"] = round(float(sl[0]), 1) if sl[0] > 0 else None
+                rec["defSnapLast"] = round(float(sl[1]), 1) if sl[1] > 0 else None
         out.append({k2: v for k2, v in rec.items() if v is not None})
     return {"throughWeek": before_week - 1, "count": len(out), "players": out}
 
@@ -617,6 +632,13 @@ def build(season: int, week: int | None) -> dict:
             implied[g.home_team] = round((g.total_line + g.spread_line) / 2, 1)
             implied[g.away_team] = round((g.total_line - g.spread_line) / 2, 1)
 
+    reg = schedule[(schedule["season"] == season) & (schedule["game_type"] == "REG")]
+    all_teams = set(reg["home_team"]) | set(reg["away_team"])
+    byes = {}
+    for wk, gw in reg.groupby("week"):
+        for tm in all_teams - (set(gw["home_team"]) | set(gw["away_team"])):
+            byes[_canon_team(tm)] = int(wk)
+
     log("Loading player stats...")
     cur_stats = load_stats(season)
     cur = points_allowed_per_game(cur_stats, before_week=week) if cur_stats is not None else points_allowed_per_game(pd.DataFrame())
@@ -668,6 +690,7 @@ def build(season: int, week: int | None) -> dict:
         "matchups": expand_aliases(matchups),
         "defenseAverages": expand_aliases(defense),
         "vegasImplied": expand_aliases(implied),
+        "byeWeeks": expand_aliases(byes),
         "source": (
             f"nflverse player stats (league-scoring FPA through {season} Week {week - 1}, "
             f"up to {cur_games} game(s){blend}) + nflverse schedule/lines. Auto-generated."
