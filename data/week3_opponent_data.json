@@ -287,7 +287,7 @@
     "WSH": 16.8
   },
   "source": "nflverse player stats (league-scoring FPA through 2026 Week 2, up to 2 game(s), blended with 2025 at a 4-game weight) + nflverse schedule/lines. Auto-generated.",
-  "updated": "2026-09-24T01:00:17Z",
+  "updated": "2026-09-24T01:34:17Z",
   "playerPoints": {
     "week": 2,
     "count": 1106,
